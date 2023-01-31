@@ -1,0 +1,20 @@
+{% extends 'french/outils/model.html' %}
+
+
+<!-- website title -->
+{% block title %}
+    <title>Sa-la Design</title>
+{% endblock %}
+
+<!-- css files -->
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('desktop.static', filename='desktop/css/secure.css')}}">
+{% endblock %}
+
+<!-- body content -->
+{% block content %}
+    <div class="warning">
+        <h1>Vous avez été redirigé ici parce que vous avez essayé d'accéder à une page que notre serveur ne peut pas afficher pour des raison de sécurité du système.</h1>
+        <h1>Vous pouvez, à présent, retourner à la <a href="{{url_for('desktop.acceuil')}}">page d'accueil</a></h1>
+    </div>
+{% endblock %}

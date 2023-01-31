@@ -1,0 +1,280 @@
+body, ul, p, h2 {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+body {
+  background-color: #F7F2EC;
+  background: rgb(204, 201, 191);
+  background: linear-gradient(90deg, rgb(204, 201, 191) 0%, rgb(247, 242, 224) 49%, rgb(204, 201, 191) 100%);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container-medium {
+  margin: 0 10em;
+  margin-bottom: 2em;
+}
+
+header::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 6em;
+}
+
+header {
+  position: relative;
+  bottom: 6em;
+  width: 100%;
+  transition: bottom 0.2s;
+}
+header .sp-container {
+  z-index: 5;
+  width: 100%;
+  height: 6em;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 3px 10px black;
+}
+header .sp-container .container-medium {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+header .sp-container .container-medium h1 span {
+  color: #8ACE31;
+}
+header .sp-container .container-medium h1:hover {
+  cursor: pointer;
+}
+header .sp-container .container-medium nav ul {
+  display: flex;
+}
+header .sp-container .container-medium nav ul li {
+  margin-left: 1.8em;
+}
+header .sp-container .container-medium nav ul li a {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: rgb(107, 105, 105);
+}
+header .sp-container .container-medium nav ul li:hover a {
+  color: black;
+}
+
+.hero {
+  background-color: #BADCBD;
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+.hero div {
+  margin-bottom: 0;
+  text-align: center;
+}
+.hero div h2 {
+  font-weight: 100;
+  font-size: 2.2em;
+}
+
+.content-1 .container-medium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-1 .container-medium .container-text {
+  width: 90%;
+}
+.content-1 .container-medium .container-text .title {
+  font-size: 1.5em;
+  position: relative;
+  right: 2em;
+}
+.content-1 .container-medium .container-text .title span {
+  margin: 0.5em 0.2em;
+}
+.content-1 .container-medium .container-text .title span:hover::after {
+  opacity: 100%;
+}
+.content-1 .container-medium .container-text .title span::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0.2em;
+  left: 1em;
+  height: 0.18em;
+  width: 8em;
+  background-color: black;
+  border-radius: 10em;
+  opacity: 10%;
+  transition: opacity 0.2s;
+}
+.content-1 .container-medium .container-text .text p {
+  margin: 1em 0;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.seperation {
+  z-index: -5;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.seperation .left-side {
+  height: 14.962em;
+  width: 1em;
+  background-color: green;
+  position: relative;
+  top: 4.35em;
+}
+.seperation .in-angle {
+  height: 15em;
+  width: 99.3%;
+  background-color: green;
+  transform: rotate(-6deg);
+  position: absolute;
+}
+.seperation .right-side {
+  height: 14.962em;
+  width: 1.6em;
+  background-color: green;
+  position: relative;
+  bottom: 4.35em;
+}
+
+.content-2 {
+  margin-top: 4em;
+}
+.content-2 .container-medium {
+  display: flex;
+  justify-content: space-around;
+}
+.content-2 .container-medium .shifted {
+  position: relative;
+  bottom: 15em;
+}
+.content-2 .container-medium .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+.content-2 .container-medium .column .title {
+  font-size: 1.6em;
+  position: relative;
+  right: 4.5em;
+}
+.content-2 .container-medium .column .title span {
+  margin: 0.5em 0.2em;
+}
+.content-2 .container-medium .column .title span:hover::after {
+  opacity: 100%;
+}
+.content-2 .container-medium .column .title span::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0.2em;
+  left: 1em;
+  height: 0.18em;
+  width: 10em;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10em;
+  opacity: 10%;
+  transition: opacity 0.2s;
+}
+.content-2 .container-medium .column .container-img {
+  margin-bottom: 5em;
+  width: 20em;
+  background-color: #D9D9D9;
+  border: 1px solid black;
+  box-shadow: 0 2em 15em 1em #000000;
+}
+.content-2 .container-medium .column .container-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content-2 .container-medium .column ul li {
+  list-style: disc;
+  margin: 1em;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.content-3 .container-medium {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-3 .container-medium .box-article {
+  background-color: rgba(0, 128, 0, 0.87);
+  padding: 0.5em 1.2em;
+  border: 2px solid black;
+  border-radius: 20em;
+  margin: 1em 4em;
+}
+.content-3 .container-medium .box-article a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+.content-3 .container-medium .box-article:hover {
+  background-color: black;
+}
+.content-3 .container-medium .box-article:hover a {
+  color: lightgreen;
+}
+
+.more {
+  background-color: lightblue;
+  padding: 3em;
+}
+.more div {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.more div .more-info button {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 0 1em;
+  border-radius: 10em;
+}
+
+footer {
+  background-color: #0C1232;
+  padding: 2em 0 0.5em;
+}
+footer div {
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+}
+footer div .conditions p, footer div .copyrights p {
+  display: inline-block;
+  margin: 1em 2em;
+}/*# sourceMappingURL=recyclage.css.map */
