@@ -19,7 +19,7 @@ class AppSetup:
             if first_redirect:
                 return redirect(url_for(first_redirect))
             else:
-                return "hello world" #redirect(url_for('main.root'))
+                return "hello world"
     
         return app
 

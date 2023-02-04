@@ -69,7 +69,7 @@ class BluprintSetup:
         
 
     def add_template(self, page):
-        self.variables['pages'][page] = f'{page}.html'
+        self.variables['pages'][page] = f'french/{page}.html'
 
     
     def set_website_name(self, website_name):

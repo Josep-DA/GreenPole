@@ -3,7 +3,7 @@
 from .blueprint_setup import BluprintSetup
 
 blueprint_setup = BluprintSetup(name='main', language='french')
-blueprint_setup.set_website_name('QG-Info')
+blueprint_setup.set_website_name(('Green','Pole'))
 
 bp = blueprint_setup.bp
 
@@ -17,6 +17,11 @@ variables = blueprint_setup.variables
 WEBSITE_NAME = blueprint_setup.variables['website_name']
 
 # Create more pages here! ⬇
+
+blueprint_setup.add_template('recyclage')
+blueprint_setup.add_template('blog')
+blueprint_setup.add_template('a-propos')
+blueprint_setup.add_template('article-blog')
 
 
 # Ex.: blueprint_setup.add_page('boutique')

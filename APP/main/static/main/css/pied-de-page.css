@@ -1,0 +1,36 @@
+.container-medium {
+  margin: 0 10em;
+  margin-bottom: 2em;
+}
+
+.more {
+  background-color: lightblue;
+  padding: 3em;
+}
+.more div {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.more div .more-info button {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 0 1em;
+  border-radius: 10em;
+}
+
+footer {
+  background-color: #0C1232;
+  padding: 2em 0 0.5em;
+}
+footer div {
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+}
+footer div .conditions p, footer div .copyrights p {
+  display: inline-block;
+  margin: 1em 2em;
+}/*# sourceMappingURL=pied-de-page.css.map */
