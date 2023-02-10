@@ -1,4 +1,4 @@
-from .setup import bp, render_page, variables, WEBSITE_NAME
+from .setup import bp, render_page, variables, WEBSITE_NAME, MODEL1
 
 # Pages' endpoints
 @bp.route('/acceuil')

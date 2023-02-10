@@ -1,5 +1,3 @@
-<!-- This is a vrification d-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,55 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sa-la Design</title>
-    <!-- css file -->
-    <link rel="stylesheet" href="{{url_for('main.static', filename='css/model.css')}}">
-    {% if current_page == 'acceuil' %}
-    <link rel="stylesheet" href="{{url_for('main.static', filename='css/acceuil.css')}}">
-    {% endif %}
-
-    <script src="https://kit.fontawesome.com/d1b22cfff1.js" crossorigin="anonymous"></script>
+    {% block head %}
+    {% endblock %}
 </head>
 
 <body>
+    {% with website_name=website_name %}
+        {% include "french/tools/barre-de-navigation.html"%}
+    {% endwith %}
 
-    <div class="navbar">
-
-    </div> 
-
-    <!-- start -->
-
-    {% block content %}
+    {% block body %}
     {% endblock %}
 
-    <!-- end -->
-
-    <footer>
-        <div class="container-medium">
-
-            <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-
-            <a href="#">@Sa-la Design</a>
-
-            <div class="copyrights">
-                <p>
-                    Copyright © 2022 Sa-la Desing
-                </p>
-                <p>
-                    Tous droits réservés.
-                </p>
-            </div>
-
-        </div>
-    </footer>
-
-    <script src="{{url_for('main.static', filename='javascript/script.js')}}"></script>
+    {% include "french/tools/pied-de-page.html" %}
 </body>
 
 </html>
