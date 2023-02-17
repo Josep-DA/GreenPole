@@ -1,4 +1,4 @@
-from .setup import bp, render_page, variables, WEBSITE_NAME, MODEL1
+from .setup import bp, render_page, variables, WEBSITE_NAME
 
 # Pages' endpoints
 @bp.route('/acceuil')
@@ -20,6 +20,10 @@ def blog():
 @bp.route('/article-blog')
 def article_blog():
     return render_page('article-blog', website_name=WEBSITE_NAME)
+
+@bp.route('/contactez-nous')
+def contactez_nous():
+    return render_page('contactez-nous', website_name=WEBSITE_NAME)
 
 # Database related
 

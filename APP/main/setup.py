@@ -22,6 +22,7 @@ blueprint_setup.add_template('recyclage')
 blueprint_setup.add_template('blog')
 blueprint_setup.add_template('a-propos')
 blueprint_setup.add_template('article-blog')
+blueprint_setup.add_template('contactez-nous')
 
 
 # Ex.: blueprint_setup.add_page('boutique')
