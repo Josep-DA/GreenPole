@@ -5,6 +5,7 @@
 
 .shift {
     padding-bottom: 6em;
+    background-color: #BADCBD;
 }
 
 header {
@@ -39,6 +40,15 @@ header {
             nav {
                 ul {
                     display: flex;
+
+                    .current-li::after {
+                        content: '';
+                        display: block;
+                        height: .2em;
+                        width: 100%;
+                        background-color: rgb(185, 248, 101);
+                        border-radius: 5em;
+                    }
                     
                     li {
                         margin-left: 1.8em;

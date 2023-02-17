@@ -10,6 +10,9 @@ footer {
     .container-simple {
         color:white;
         margin-bottom: 1em;
+        div {
+            margin: 1.5em 2em;
+        }
         .autres-infos {
             display: flex;
             justify-content: space-around;
@@ -48,7 +51,7 @@ footer {
     }
     
     .container-medium {
-        margin-bottom: 0;
+        margin-bottom: 2em;
         text-align: center;
         color:white;
 
