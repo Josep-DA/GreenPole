@@ -1,0 +1,70 @@
+{% extends "french/tools/model.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('main.static', filename='css/blog.css')}}">
+<title>Home</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+<section class="hero">
+    <div class="container-medium">
+        <h2>« Être informer pour être balancer »</h2>
+    </div>
+</section>
+
+<section class="content-1">
+    <div class="container-medium">
+        <h2 class="title">
+            <span><a href="{{url_for('main.article_blog')}}">À la une.</a></span>
+        </h2>
+        <div class="container-article">
+            <div class="box-article"></div>
+            <div class="box-article"></div>
+            <div class="box-article"></div>
+            <div class="box-article"></div>
+        </div>
+    </div>
+</section>
+
+<div class="seperation">
+    <div class="left-side"></div>
+    <div class="in-angle"></div>
+    <div class="right-side"></div>
+</div>
+
+<section class="content-2">
+    <div class="container-medium">
+        <h2 class="title">
+            <span>Pour un monde meilleur.</span>
+        </h2>
+        <div class="container-article">
+            <div class="box-article"></div>
+            <div class="box-article"></div>
+            <div class="box-article"></div>
+            <div class="box-article"></div>
+        </div>
+    </div>
+</section> 
+
+<section class="content-3">
+    <div class="container-medium">
+        <div class="box-article">
+            <a href="#">Qu’est ce qui est recyclabe?</a>
+        </div>
+        <div class="box-article">
+            <a href="#">Que faire pour réduire son empreinte écologique</a>
+        </div>
+        <div class="box-article">
+            <a href="#">Et l’environnement?</a>
+        </div>
+        <div class="box-article">
+            <a href="#">Un geste pour les générations futures</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

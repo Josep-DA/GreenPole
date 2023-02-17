@@ -1,0 +1,90 @@
+{% extends "french/tools/model.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('main.static', filename='css/blog_post.css')}}">
+<title>Home</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+<section class="top-hero">
+    <div class="container-top-image">
+        <img src="https://journalmetro.com/wp-content/uploads/2021/06/GENERAL_Journee-environnement-26-05-MC-474-mots.jpg?fit=1200%2C630" alt="top-image">
+        <div class="container-medium">
+            <h2 class="title">
+                Tendons la main à l'environement
+            </h2>
+            <address>
+                Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+                Read other article written by the author: Example.com<br>
+                <br>
+                Date: <span class="date">10 jan 20223</span>
+            </address>
+        </div>
+    </div>
+</section>
+
+<section class="content p1">
+    <div class="container-medium">
+        <div class="container-text">
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content p2">
+    <div class="container-medium">
+        <div class="container-text">
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+        <div class="container-image">
+            <img src="https://cdn0.projetecolo.com/fr/posts/1/7/5/comment_proteger_l_environnement_571_600.webp" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="content p3">
+    <div class="container-medium">
+        <div class="container-text">
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content p4">
+    <div class="container-medium">
+        <div class="container-text">
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="signature">
+    <div class="container-medium">
+        <div class="container-text">
+            <p class="text"> 
+                Une production de GreenPole
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="seperation">
+    <div class="left-side"></div>
+    <div class="in-angle"></div>
+    <div class="right-side"></div>
+</div>
+
+{% endblock %}

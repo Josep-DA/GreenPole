@@ -4,9 +4,9 @@ from selenium.webdriver.chrome.service import Service
 import sys
 
 
-def get_data(path:str):
+def get_data(path: str):
     with open(path, 'r') as file:
-       return file.readlines()
+        return file.readlines()
 
 
 chrome_driver_path = "F:/chromedriver/chromedriver.exe"
@@ -21,12 +21,12 @@ driver.get("http://127.0.0.1:8080/main/acceuil")
 
 data = {
     "html": {
-        "path": 'F:/E-commerce/Projet SJD-ART3D/SiteWeb/Flask/SiteWeb/App/main/templates/main/acceuil.html',
+        "path": 'F://Madjico_(Développeur)//PYTHON//Projet Pei//Projet Communautaire (Code)//GreenPole//APP//main//templates//main//french//acceuil.html',
         "data": "",
         "isuptodate": ""
     },
     "css": {
-        "path": 'F:/E-commerce/Projet SJD-ART3D/SiteWeb/Flask/SiteWeb/App/main/static/main/css/model.css',
+        "path": 'F://Madjico_(Développeur)//PYTHON//Projet Pei//Projet Communautaire (Code)//GreenPole//APP//main//static//main//css//home.css',
         "data": "",
         "isuptodate": ""
     }
@@ -41,12 +41,12 @@ except IndexError:
 
 print(duration)
 
-start = time()   
+start = time()
 
 while not round(time() - start) >= duration:
     data["html"]["data"] = get_data(data["html"]["path"])
     data["css"]["data"] = get_data(data["css"]["path"])
-       
+
     if data["html"]["isuptodate"] != data["html"]["data"]:
         data["html"]["isuptodate"] = get_data(data["html"]["path"])
         print('update')
