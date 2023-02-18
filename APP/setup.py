@@ -1,4 +1,5 @@
 def start_app(deployment: str = ''):
+    from flask import url_for
     from .setups.app_setup import AppSetup
     from .setups.server_setup import ServerSetup
     from .main import bp as main_bp
@@ -10,7 +11,11 @@ def start_app(deployment: str = ''):
 
     # Blueprints
     app_setup.register_blueprint(main_bp)
+
     app_setup.register_blueprint(recherches_bp)
+    @app_setup.app.route('/recherches')
+    def recherches():
+        return app_setup.redirect(url_for('recherches.home'))
 
 
     # Create server & Link app to server

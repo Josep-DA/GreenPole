@@ -6,7 +6,7 @@ from flask import request
 # Pour créer des fonction de décoration: 'https://realpython.com/primer-on-python-decorators/
 
 domains = [
-    "https://siteweb.jadleonard.repl.co", "http://192.168.0.129:8080",
+    "http://192.168.0.129:8080",
     "http://127.0.0.1:8080"
 ]
 
@@ -14,7 +14,16 @@ endpoints = [
     '/',
     '/main/secure',
     '/main/acceuil',
-    '/main/boutique',
+
+    '/recherches/secure',
+    '/recherches/device_model',
+    '/recherches/home',
+    '/recherches/mission',
+    '/recherches/origin',
+    '/recherches/founders',
+    '/recherches/process',
+    '/recherches/documentation',
+    '/recherches/FAQ',
 ]
 
 Accepted_endpoints = [
@@ -30,8 +39,6 @@ print(Accepted_endpoints)
 def is_url_safe(target):
     host_url = request.host_url
     print(host_url)
-    if host_url != 'https://siteweb.jadleonard.repl.co':
-        host_url = 'https://siteweb.jadleonard.repl.co'
     reference_url = urlparse(host_url)
     test_http_link = urljoin(host_url, target)
     test_url = urlparse(test_http_link)
