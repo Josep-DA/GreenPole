@@ -1,0 +1,66 @@
+{% extends "tools/model.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('main.static', filename='css/home.css')}}">
+<title>Acceuil</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+<section class="hero">
+    <div class="container-medium">
+        <div class="hero-text">
+            <h2>
+                <p>
+                    Un petit geste pour l’homme,
+                </p>
+                <p>
+                    un grand impact sur l’environnement
+                </p>
+            </h2>
+        </div>
+        <div class="hero-image">
+            <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTQKSKVyESbPlXtw51d39QIZGu3ZpL69V5zSaJLFW8jcr3_eVrEbgfD9ycB0T9h8eVT-AIkOT5HbUzaJCONvnE" alt="hero-image">
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-medium">
+        <div class="container-text">
+            <div class="text">
+                <p class="title">
+                    <span>Notre mission</span>
+                </p>
+                <p class="sentence">
+                    PolyVerte est un organisme a but lucratif ayant pour objectif d’inciter la population à recycler les matières pouvant être recyclées, mais qui sont malgré tout jetées.
+                \ </p>
+            </div>
+            <div class="text">
+                <p class="title">
+                    <span>Notre but</span>
+                </p>
+                <p class="sentence">
+                    Pour accomplir notre mission, PolyVerte met l’accent sur le partage d’information et de conseils sur le recyclage dans les écoles.
+                </p>
+            </div>
+            <div class="text">
+                <p class="title">
+                    <span>Notre démarche</span>
+                </p>
+                <p class="sentence">
+                    Pour accomplir notre mission, PolyVerte met l’accent sur le partage d’information et de conseils sur le recyclage dans les écoles.
+                </p>
+            </div>
+        </div>
+        
+        <div class="join">
+            <button>Join us!</button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

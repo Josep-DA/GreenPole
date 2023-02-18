@@ -2,10 +2,12 @@ from .setup import bp, render_page, variables, WEBSITE_NAME
 
 # -------- Pages' endpoints -------- #
 
-# La page d'accueil est une page servant à diriger les utilisateurs vers les autres pages de la section recherches.
-@bp.route('/acceuil')
-def acceuil():
-    return render_page('acceuil', website_name=WEBSITE_NAME)
+# La page home est une page servant à diriger les utilisateurs vers les autres pages de la section recherches.
+
+
+@bp.route('/home')
+def home():
+    return render_page('home', website_name=WEBSITE_NAME)
 
 # #
 
@@ -18,26 +20,26 @@ def mission():
 # #
 
 
-# La page origine est une page parlant de l'origine du projet GreenPole et de pourquoi il a été réalisé.
-@bp.route('/origine')
-def origine():
-    return render_page('origine', website_name=WEBSITE_NAME)
+# La page origin est une page parlant de l'origine du projet GreenPole et de pourquoi il a été réalisé.
+@bp.route('/origin')
+def origin():
+    return render_page('origin', website_name=WEBSITE_NAME)
 
 # #
 
 
-# La page fondateurs est une page parlant des créateurs à l'origine de ce projet et de pourquoi il ont participé à la création de ce projet.
-@bp.route('/fondateurs')
-def fondateurs():
-    return render_page('fondateurs', website_name=WEBSITE_NAME)
+# La page founders est une page parlant des créateurs à l'origine de ce projet et de pourquoi il ont participé à la création de ce projet.
+@bp.route('/founders')
+def founders():
+    return render_page('founders', website_name=WEBSITE_NAME)
 
 # #
 
 
-# La page parcours est une page parlant des étapes de réalisation du projet GreenPole.
-@bp.route('/parcours')
-def parcours():
-    return render_page('parcours', website_name=WEBSITE_NAME)
+# La page process est une page parlant des étapes de réalisation du projet GreenPole.
+@bp.route('/process')
+def process():
+    return render_page('process', website_name=WEBSITE_NAME)
 
 # #
 
@@ -50,11 +52,12 @@ def documentation():
 # #
 
 
-# La page foires-aux-questions est une page où les utilisateurs peuvent poser des questions sur le projet GreenPole.
-@bp.route('/foires-aux-questions')
-def foires_aux_questions():
-    return render_page('foires-aux-questions', website_name=WEBSITE_NAME)
+# La page FAQ est une page où les utilisateurs peuvent poser des questions sur le projet GreenPole.
+@bp.route('/FAQ')
+def faq():
+    return render_page('FAQ', website_name=WEBSITE_NAME)
 
 # #
+
 
 setup_done = "**//IMPORTANT//** -- All desktop endpoints have been setted! ECODE: DESK-001!"

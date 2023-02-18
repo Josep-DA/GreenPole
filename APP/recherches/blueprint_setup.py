@@ -3,15 +3,15 @@ from APP.url_authenticater import redirect_back
 
 # -------------------------------------------------------------------------- #
 
+
 class BluprintSetup:
-    def __init__(self, name: str, language: str):
+    def __init__(self, name: str, website_name: tuple):
 
         self.name = name
-        self.language = language
-        
+
         self.bp: Blueprint = self.create_blueprint()
 
-        self.variables: dict = self.set_variables(language)
+        self.variables: dict = self.set_variables(website_name)
 
         # Security
 
@@ -19,62 +19,40 @@ class BluprintSetup:
 
     def create_blueprint(self):
         bp = Blueprint(
-            self.name, __name__, url_prefix=f'/{self.name}',
-            static_folder=f'static/{self.name}', template_folder=f'templates/{self.name}')
+            self.name,
+            __name__,
+            url_prefix=f'/{self.name}',
+            static_folder=f'static/{self.name}',
+            template_folder=f'templates/{self.name}'
+        )
 
-        print(f"{self.name}/static/{self.name}/")
-
-        if self.language == 'english':
-            @bp.route('/')
-            def root():
-                return self.render_tool('device_model')
-
-        else:
-            @bp.route('/')
-            def root():
-                return self.render_tool(tool='model_appareil')
+        @bp.route('/')
+        def root():
+            return self.render_tool('device_model')
 
         return bp
 
+    def set_variables(self, website_name):
 
-    def set_variables(self, language):
-        variables = None
-
-        if language == 'english':
-            variables = {
-                'pages': {
-                    'home': 'home.html',
-                },
-                'tools': {
-                    'secure': 'secure.html',
-                    'device_model': 'device_model.html',
-                },
-                'prefix': f'{self.name}.',
-                'website_name': ''
-            }
-        else:
-            variables = {
-                'pages': {
-                    'acceuil': 'french/acceuil.html',
-                },
-                'tools': {
-                    'secure': 'french/tools/secure.html',
-                    'model_appareil': 'french/tools/model_appareil.html',
-                },
-                'prefix': f'{self.name}.',
-                'website_name': ''
-            }
+        variables = {
+            'pages': {
+                'home': 'home.html',
+            },
+            'tools': {
+                'secure': 'tools/secure.html',
+                'device_model': 'tools/device_model.html',
+            },
+            'prefix': f'{self.name}.',
+            'website_name': website_name
+        }
 
         return variables
-        
 
     def add_template(self, page):
         self.variables['pages'][page] = f'french/{page}.html'
 
-    
     def set_website_name(self, website_name):
         self.variables['website_name'] = website_name
-
 
     def get_template(self, page):
         return self.variables['pages'].get(page)
@@ -85,7 +63,6 @@ class BluprintSetup:
     def set_prefix(self, endpoint):
         return self.variables['prefix'] + endpoint
 
-
     # Templates
 
     def render_page(self, page: str, **kargs):
@@ -93,7 +70,7 @@ class BluprintSetup:
 
     def render_tool(self, tool: str, **kargs):
         return render_template(self.get_tool(tool), **kargs)
-        
+
     # Security
     def secure_redirect(self, target: str, _bp_=True, _url_for_=True, **values):
         if _bp_:

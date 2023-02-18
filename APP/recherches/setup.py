@@ -2,8 +2,8 @@
 # Import the Blueprint
 from .blueprint_setup import BluprintSetup
 
-blueprint_setup = BluprintSetup(name='main', language='french')
-blueprint_setup.set_website_name(('Green','Pole'))
+blueprint_setup = BluprintSetup(
+    name='recherches', website_name=('Green', 'Pole'))
 
 bp = blueprint_setup.bp
 
@@ -18,10 +18,12 @@ WEBSITE_NAME = blueprint_setup.variables['website_name']
 
 # Create more pages here! ⬇
 
-blueprint_setup.add_template('recyclage')
-blueprint_setup.add_template('blog')
-blueprint_setup.add_template('a-propos')
-blueprint_setup.add_template('article-blog')
+blueprint_setup.add_template('mission')
+blueprint_setup.add_template('origine')
+blueprint_setup.add_template('fondateurs')
+blueprint_setup.add_template('parcours')
+blueprint_setup.add_template('documentation')
+blueprint_setup.add_template('foires-aux-questions')
 
 
 # Ex.: blueprint_setup.add_page('boutique')
