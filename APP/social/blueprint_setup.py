@@ -17,7 +17,7 @@ class BluprintSetup(UrlManager):
             __name__,
             url_prefix=f'/{self.name}',
             static_folder=f'static/{self.name}',
-            template_folder=f'templates/{self.name}'
+            template_folder='templates/'
         )
 
         @bp.route('/')
@@ -31,11 +31,7 @@ class BluprintSetup(UrlManager):
 
         variables = {
             'pages': {
-                'home': 'home.html',
-            },
-            'tools': {
-                'secure': 'tools/secure.html',
-                'device_model': 'tools/device_model.html',
+                'home': f'{self.name}/home.html',
             },
             'prefix': f'{self.name}.',
             'website_name': website_name

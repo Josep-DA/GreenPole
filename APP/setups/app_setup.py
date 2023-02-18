@@ -3,6 +3,8 @@ from ..url_manager import UrlManager
 
 class AppSetup(UrlManager):
     def __init__(self, website_name: tuple):
+        self.name = 'app'
+
         self.app: Flask = self.create_app()
 
         self.variables: dict = self.set_variables(website_name)
@@ -24,7 +26,7 @@ class AppSetup(UrlManager):
     def set_variables(self, website_name):
         variables = {
             'pages': {
-                'home': 'home.html',
+                'home': 'app/home.html',
             },
             'tools': {
                 'secure': 'tools/secure.html',
