@@ -17,7 +17,7 @@ class AppSetup(UrlManager):
 
         @app.route('/')
         def root():
-            return self.render_tool('device_model', add_navbar_footer=False)
+            return self.render_tool('device_model', add_navbar_footer=False, redirect_back_to='recherches.home')
     
         return app
 

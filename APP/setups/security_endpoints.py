@@ -12,7 +12,8 @@ def secure():
 @app.route('/device_model')
 def check():
     ua_string = request.args.get("user_agent")
-    print(ua_string)
+    redirect_back_to = request.args.get("redirect_back_to")
+    print(ua_string, redirect_back_to)
 
     user_agent = parse(ua_string)
     print(user_agent)
@@ -20,7 +21,7 @@ def check():
 
     # Computer
     if user_agent.is_pc:
-        return secure_redirect(target='home', _bp_=False)
+        return secure_redirect(target=redirect_back_to, _bp_=False)
 
     # Tablet
     elif user_agent.is_tablet:
