@@ -2,12 +2,15 @@ def start_app(deployment: str = ''):
     from .setups.app_setup import AppSetup
     from .setups.server_setup import ServerSetup
     from .main import bp as main_bp
+    from .recherches import bp as recherches_bp
+    
 
     # Create app
     app_setup = AppSetup('main.root')
 
     # Blueprints
     app_setup.register_blueprint(main_bp)
+    app_setup.register_blueprint(recherches_bp)
 
 
     # Create server & Link app to server

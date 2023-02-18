@@ -18,7 +18,7 @@
      
     {% if add_navbar_footer == true %}
       {% with website_name=website_name %}
-        {% include "tools/navigation.html"%} 
+        {% include "tools/navbar.html"%} 
       {% endwith %}
     {% endif %}
     
@@ -27,7 +27,7 @@
 
     
     {% if add_navbar_footer == true %}
-      {% include "tools/pied-de-page.html" %}
+      {% include "tools/footer.html" %}
 
       <script src="{{url_for('main.static', filename='javascript/navbar.js')}}"></script>
     {% endif %}
