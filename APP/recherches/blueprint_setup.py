@@ -28,7 +28,7 @@ class BluprintSetup:
 
         @bp.route('/')
         def root():
-            return self.render_tool('device_model')
+            return self.render_tool('device_model', add_navbar_footer=False)
 
         return bp
 
