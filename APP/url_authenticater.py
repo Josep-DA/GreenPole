@@ -13,14 +13,18 @@ domains = [
 endpoints = [
     '/',
     '/home',
+    '/device_model',
 
     '/main/',
-    '/main/secure',
     '/main/acceuil',
 
+    '/social/',
+    '/social/home',
+
+    '/blog/',
+    '/blog/home',
+
     '/recherches/',
-    '/recherches/secure',
-    '/recherches/device_model',
     '/recherches/home',
     '/recherches/mission',
     '/recherches/origin',
