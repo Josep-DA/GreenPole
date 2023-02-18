@@ -20,7 +20,7 @@ class BluprintSetup:
     def create_blueprint(self):
         bp = Blueprint(
             self.name, __name__, url_prefix=f'/{self.name}',
-            static_folder=f'static/{self.name}', template_folder=f'templates/{self.name}')
+            static_folder=f'static/{self.name}', template_folder='templates/')
 
         print(f"{self.name}/static/{self.name}/")
 

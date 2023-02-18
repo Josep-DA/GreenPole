@@ -17,12 +17,13 @@ class BluprintSetup(UrlManager):
             __name__,
             url_prefix=f'/{self.name}',
             static_folder=f'static/{self.name}',
-            template_folder=f'templates/{self.name}'
+            template_folder=f'templates/',
         )
 
         @bp.route('/')
         def root():
-            return self.render_tool('device_model', add_navbar_footer=False)
+            return self.secure_redirect('home')
+
 
         return bp
 
@@ -30,11 +31,7 @@ class BluprintSetup(UrlManager):
 
         variables = {
             'pages': {
-                'home': 'home.html',
-            },
-            'tools': {
-                'secure': 'tools/secure.html',
-                'device_model': 'tools/device_model.html',
+                'home': 'recherches/home.html',
             },
             'prefix': f'{self.name}.',
             'website_name': website_name

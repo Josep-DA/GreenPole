@@ -10,7 +10,7 @@
         <script>
             function userAgent(){
             let user_agent = navigator.userAgent;
-            location.replace("/device_model?user_agent=" + user_agent)
+            location.replace("/device_model?user_agent=" + user_agent + '&redirect_back_to={{redirect_back_to}}')
             }
 
             userAgent()

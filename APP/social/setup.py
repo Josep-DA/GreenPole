@@ -3,7 +3,7 @@
 from .blueprint_setup import BluprintSetup
 
 blueprint_setup = BluprintSetup(
-    name='recherches', website_name=('Green', 'Pole'))
+    name='social', website_name=('Green', 'Pole'))
 
 bp = blueprint_setup.bp
 
