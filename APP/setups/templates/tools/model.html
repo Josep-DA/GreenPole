@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    {% if add_navbar_footer == true %}
+      <link rel="stylesheet" href="{{url_for('static', filename='css/tools/navbar.css')}}"/>
+      <link rel="stylesheet" href="{{url_for('static', filename='css/tools/footer.css')}}">
+    {% endif %}
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/tools/base-style.css')}}">
+    
+    {% block head %} {% endblock %}
+  </head>
+
+  <body>
+     
+    {% if add_navbar_footer == true %}
+      {% with website_name=website_name %}
+        {% include "tools/navbar.html"%} 
+      {% endwith %}
+    {% endif %}
+    
+
+    {% block body %} {% endblock %} 
+
+    
+    {% if add_navbar_footer == true %}
+      {% include "tools/footer.html" %}
+
+      <script src="{{url_for('static', filename='javascript/tools/navbar.js')}}"></script>
+    {% endif %}
+  </body>
+</html>

@@ -1,14 +1,15 @@
-from flask import Flask, url_for, redirect, Blueprint
+from flask import Flask, Blueprint
+from ..url_manager import UrlManager
 
+class AppSetup(UrlManager):
+    def __init__(self, website_name: tuple):
+        self.app: Flask = self.create_app()
 
-class AppSetup:
-    def __init__(self, first_redirect: str = ""):
-        
-        self.app: Flask = self.create_app(first_redirect)
+        self.variables: dict = self.set_variables(website_name)
 
-        self.variables: dict = self.set_variables()
+        super().__init__()
     
-    def create_app(self, first_redirect: str = ""):
+    def create_app(self):
         from .config import Config as config_object
         
         app = Flask(__name__)
@@ -16,15 +17,23 @@ class AppSetup:
 
         @app.route('/')
         def root():
-            if first_redirect:
-                return redirect(url_for(first_redirect))
-            else:
-                return "hello world"
+            return self.render_tool('device_model', add_navbar_footer=False)
     
         return app
 
-    def set_variables(self):
-        variables = {}
+    def set_variables(self, website_name):
+        variables = {
+            'pages': {
+                'home': 'home.html',
+            },
+            'tools': {
+                'secure': 'tools/secure.html',
+                'device_model': 'tools/device_model.html',
+            },
+            'prefix': '',
+            'website_name': website_name
+        }
+
         return variables
 
     def register_blueprint(self, bp: Blueprint):

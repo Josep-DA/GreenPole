@@ -12,6 +12,8 @@ domains = [
 
 endpoints = [
     '/',
+    '/home',
+
     '/main/secure',
     '/main/acceuil',
 
@@ -45,7 +47,7 @@ def is_url_safe(target):
     
     print(test_url.scheme in ('http', 'https'), '1')
     print(reference_url.netloc == test_url.netloc, 2)
-    print(test_http_link)
+    print(test_http_link, target)
     print(test_http_link in Accepted_endpoints)
     
     return test_url.scheme in ('http', 'https') and reference_url.netloc == test_url.netloc and test_http_link in Accepted_endpoints
