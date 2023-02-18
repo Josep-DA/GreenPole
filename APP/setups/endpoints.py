@@ -14,7 +14,7 @@ def home():
 # L'url /recherche sert à rediriger vers la section recherches.'
 @app.route('/recherches')
 def recherches():
-    return secure_redirect('recherches.home')
+    return secure_redirect('recherches.root')
 
 # #
 

@@ -14,9 +14,11 @@ endpoints = [
     '/',
     '/home',
 
+    '/main/',
     '/main/secure',
     '/main/acceuil',
 
+    '/recherches/',
     '/recherches/secure',
     '/recherches/device_model',
     '/recherches/home',
