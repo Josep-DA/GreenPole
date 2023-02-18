@@ -37,13 +37,10 @@ header .sp-container .container-medium h1:hover {
 header .sp-container .container-medium nav ul {
   display: flex;
 }
-header .sp-container .container-medium nav ul .current-li::after {
-  content: "";
-  display: block;
-  height: 0.2em;
-  width: 100%;
-  background-color: rgb(185, 248, 101);
-  border-radius: 5em;
+header .sp-container .container-medium nav ul .current-li a {
+  color: black;
+  font-weight: bold;
+  font-weight: bolder;
 }
 header .sp-container .container-medium nav ul li {
   margin-left: 1.8em;

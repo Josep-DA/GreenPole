@@ -41,13 +41,10 @@ header {
                 ul {
                     display: flex;
 
-                    .current-li::after {
-                        content: '';
-                        display: block;
-                        height: .2em;
-                        width: 100%;
-                        background-color: rgb(185, 248, 101);
-                        border-radius: 5em;
+                    .current-li a {
+                            color: black;
+                            font-weight: bold;
+                            font-weight: bolder;
                     }
                     
                     li {
