@@ -1,0 +1,19 @@
+{% extends "tools/model.html" %}
+
+{% block head %}
+    <title>Device</title>
+{% endblock %}
+
+
+{% block body %}
+    {% if "" == "" %}
+        <script>
+            function userAgent(){
+            let user_agent = navigator.userAgent;
+            location.replace("/main/model_appareil?user_agent=" + user_agent)
+            }
+
+            userAgent()
+        </script>
+    {% endif %}
+{% endblock %}
