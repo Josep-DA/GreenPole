@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     {% if add_navbar_footer == true %}
-      <link rel="stylesheet" href="{{url_for('main.static', filename='css/tools/navbar.css')}}"/>
-      <link rel="stylesheet" href="{{url_for('main.static', filename='css/tools/footer.css')}}">
+      <link rel="stylesheet" href="{{url_for('recherches.static', filename='css/tools/navbar.css')}}"/>
+      <link rel="stylesheet" href="{{url_for('recherches.static', filename='css/tools/footer.css')}}">
     {% endif %}
 
-    <link rel="stylesheet" href="{{url_for('main.static', filename='css/tools/base-style.css')}}">
+    <link rel="stylesheet" href="{{url_for('recherches.static', filename='css/tools/base-style.css')}}">
     
     {% block head %} {% endblock %}
   </head>
@@ -30,7 +30,7 @@
     {% if add_navbar_footer == true %}
       {% include "tools/footer.html" %}
 
-      <script src="{{url_for('main.static', filename='javascript/tools/navbar.js')}}"></script>
+      <script src="{{url_for('recherches.static', filename='javascript/tools/navbar.js')}}"></script>
     {% endif %}
   </body>
 </html>
