@@ -2,7 +2,7 @@
 
 {% block head %}
 
-<!-- <link rel="stylesheet" href="{{url_for('main.static', filename='css/home.css')}}"> -->
+<link rel="stylesheet" href="{{url_for('main.static', filename='css/' + page_title.lower() + '.css')}}">
 <title>{{ page_title }}</title>
 
 {% endblock %}
