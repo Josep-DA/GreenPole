@@ -13,7 +13,7 @@ class UrlManager:
 
         # Security
 
-        self.SECURE_ENDPOINT = self.set_prefix('secure')
+        self.SECURE_ENDPOINT = 'secure'
 
     def add_template(self, page):
         self.variables['pages'][page] = f'{page}.html'

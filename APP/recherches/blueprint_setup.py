@@ -22,7 +22,8 @@ class BluprintSetup(UrlManager):
 
         @bp.route('/')
         def root():
-            return self.render_tool('device_model', add_navbar_footer=False, rediract_back_to=self.url_for('recherches.home'))
+            return self.secure_redirect('home')
+
 
         return bp
 
