@@ -8,12 +8,7 @@ from flask import request
 domains = [
     "http://192.168.0.129:8080",
     "http://127.0.0.1:8080",
-<<<<<<< HEAD
     "http://localhost"
-=======
-    "http://localhost:8080",
-
->>>>>>> 17da65ca1b70041786135f9c90e987f6cadd56af
 ]
 
 endpoints = [
