@@ -28,6 +28,9 @@ header .sp-container .container-medium {
   justify-content: space-between;
   height: 100%;
 }
+header .sp-container .container-medium h1 {
+  font-size: 2.5em;
+}
 header .sp-container .container-medium h1 span {
   color: #8ACE31;
 }
