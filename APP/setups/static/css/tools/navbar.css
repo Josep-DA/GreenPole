@@ -4,20 +4,20 @@
 }
 
 .shift {
-  padding-bottom: 6em;
+  padding-bottom: 10em;
   background-color: #6D9886;
 }
 
 header {
   position: relative;
-  bottom: 6em;
+  bottom: 10em;
   width: 100%;
   transition: bottom 0.3s;
 }
 header .sp-container {
   z-index: 5;
   width: 100%;
-  height: 6em;
+  height: 10em;
   position: fixed;
   background-color: white;
   box-shadow: 0 3px 10px black;
@@ -34,22 +34,54 @@ header .sp-container .container-medium h1 span {
 header .sp-container .container-medium h1:hover {
   cursor: pointer;
 }
-header .sp-container .container-medium nav ul {
+header .sp-container .container-medium nav {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  left: 5em;
+  top: 0.5em;
 }
-header .sp-container .container-medium nav ul .current-li a {
+header .sp-container .container-medium nav .navigation {
+  display: flex;
+  margin-bottom: 2em;
+}
+header .sp-container .container-medium nav .navigation .current-li a {
   color: black;
   font-weight: bold;
   font-weight: bolder;
 }
-header .sp-container .container-medium nav ul li {
-  margin-left: 1.8em;
+header .sp-container .container-medium nav .navigation li {
+  margin-left: 2.5em;
 }
-header .sp-container .container-medium nav ul li a {
+header .sp-container .container-medium nav .navigation li a {
   font-weight: bold;
   font-size: 1.1em;
   color: rgb(107, 105, 105);
 }
-header .sp-container .container-medium nav ul li:hover a {
-  color: black;
+header .sp-container .container-medium nav .navigation li:hover a {
+  color: rgb(1, 51, 14);
+}
+header .sp-container .container-medium nav .connexion {
+  display: flex;
+  position: relative;
+  left: 1em;
+}
+header .sp-container .container-medium nav .connexion li {
+  text-align: center;
+  margin: 0.2em 0.6em 0.2em;
+  padding: 0.4em 0.6em;
+  background-color: #6D9886;
+  border-radius: 5em;
+}
+header .sp-container .container-medium nav .connexion li a {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: white;
+}
+header .sp-container .container-medium nav .connexion .se-connecter a {
+  color: rgb(169, 231, 252);
+}
+header .sp-container .container-medium nav .connexion li:hover a {
+  color: #181D31;
 }/*# sourceMappingURL=navbar.css.map */

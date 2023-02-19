@@ -6,7 +6,7 @@ from .setup import app, render_page, variables, WEBSITE_NAME, secure_redirect
 # La page home est une page servant à diriger les utilisateurs vers les autres pages de la section recherches.
 @app.route('/home')
 def home():
-    return render_page('home', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Home")
+    return render_page('home', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Home", current_li='app')
 
 # #
 
