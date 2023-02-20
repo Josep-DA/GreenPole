@@ -19,14 +19,16 @@
                         <a href="{{url_for('recherches.root')}}">Recherches</a>
                     </li>
                 </ul>
+                {% if website_command[1] == False %}
                 <ul class="connexion">
                     <li class="se-connecter">
-                        <a href="url_for('app.connexion')">Se connecter</a>
+                        <a href="{{url_for('login')}}">Se connecter</a>
                     </li>
                     <li>
-                        <a href="url_for('app.register')">Créer un compte</a>
+                        <a href="{{url_for('register')}}">Créer un compte</a>
                     </li>
                 </ul>
+                {% endif %}
             </nav>
         </div>
     </div>

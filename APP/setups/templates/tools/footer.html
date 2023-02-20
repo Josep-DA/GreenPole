@@ -1,8 +1,9 @@
 <footer>
     <div class="container-simple">
+        {% if website_command[1] == False %}
         <div class="autres-infos">
             <div>
-                <p class="title">À propos de GreenPole</p>
+                <p class="title">À propos de {{website_name[0]}}{{website_name[1]}}</p>
                 <ul>
                     <li><a href="">Nous contacter</a></li>
                     <li><a href="">En apprendre plus sur le projet</a></li>
@@ -22,6 +23,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
     <div class="container-medium">
         <div class="conditions">
             <p>Conditions d’utilisation</p>

@@ -19,7 +19,7 @@
   <body>
      
     {% if add_navbar_footer == true %}
-      {% with website_name=website_name %}
+      {% with website_command=(website_name, disable_extra_part) %}
         {% include "tools/navbar.html"%} 
       {% endwith %}
     {% endif %}
@@ -29,7 +29,9 @@
 
     
     {% if add_navbar_footer == true %}
-      {% include "tools/footer.html" %}
+      {% with website_command=(website_name, disable_extra_part) %}
+        {% include "tools/footer.html" %}
+      {% endwith %}
 
       <script src="{{url_for('static', filename='javascript/tools/navbar.js')}}"></script>
     {% endif %}
