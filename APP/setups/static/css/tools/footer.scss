@@ -9,16 +9,14 @@ footer {
 
     .container-simple {
         color:white;
-        margin-bottom: 1em;
-        div {
-            margin: 1.5em 2em;
-        }
+        margin: 1em 0;
+
         .autres-infos {
             display: flex;
             justify-content: space-around;
+            margin-left: 5em;
     
             div {
-                margin: 0 2em;
                 width: 15em;
     
                 .title {
@@ -39,6 +37,7 @@ footer {
                     li {
                         display: flex;
                         align-items: center;
+                        margin: .75em 0;
                         margin-left: 1em;
                                                 
                         a {
@@ -51,14 +50,19 @@ footer {
     }
     
     .container-medium {
-        margin-bottom: 2em;
+        margin-bottom: 1.5em;
         text-align: center;
         color:white;
 
-        .conditions, .copyrights{
+        .powered-by{
+            margin: 2em 0 0;
+            color: rgb(121, 121, 121);
+        }
+
+        .conditions, .copyrights, .powered-by {
             p {
                 display: inline-block;
-                margin: 1em 2em;
+                margin: 1em 2em 0;
             }
         }
     }

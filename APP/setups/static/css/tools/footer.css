@@ -9,17 +9,14 @@ footer {
 }
 footer .container-simple {
   color: white;
-  margin-bottom: 1em;
-}
-footer .container-simple div {
-  margin: 1.5em 2em;
+  margin: 1em 0;
 }
 footer .container-simple .autres-infos {
   display: flex;
   justify-content: space-around;
+  margin-left: 5em;
 }
 footer .container-simple .autres-infos div {
-  margin: 0 2em;
   width: 15em;
 }
 footer .container-simple .autres-infos div .title {
@@ -37,17 +34,22 @@ footer .container-simple .autres-infos div ul li::before {
 footer .container-simple .autres-infos div ul li {
   display: flex;
   align-items: center;
+  margin: 0.75em 0;
   margin-left: 1em;
 }
 footer .container-simple .autres-infos div ul li a {
   color: white;
 }
 footer .container-medium {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   text-align: center;
   color: white;
 }
-footer .container-medium .conditions p, footer .container-medium .copyrights p {
+footer .container-medium .powered-by {
+  margin: 2em 0 0;
+  color: rgb(121, 121, 121);
+}
+footer .container-medium .conditions p, footer .container-medium .copyrights p, footer .container-medium .powered-by p {
   display: inline-block;
-  margin: 1em 2em;
+  margin: 1em 2em 0;
 }/*# sourceMappingURL=footer.css.map */

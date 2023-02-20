@@ -18,12 +18,8 @@ WEBSITE_NAME = app_setup.variables['website_name']
 
 # Create more pages here! ⬇
 
-app_setup.add_template('mission')
-app_setup.add_template('origin')
-app_setup.add_template('founders')
-app_setup.add_template('process')
-app_setup.add_template('documentation')
-app_setup.add_template('FAQ')
+app_setup.add_template('login')
+app_setup.add_template('register')
 
 
 # Ex.: app_setup.add_page('boutique')

@@ -1,26 +1,37 @@
 <footer>
     <div class="container-simple">
+        {% if website_command[1] == False %}
         <div class="autres-infos">
             <div>
-                <p class="title">Notre blog</p>
+                <p class="title">À propos de {{website_name[0]}}{{website_name[1]}}</p>
                 <ul>
-                    <li><a href="">Visiter notre blog</a></li>
+                    <li><a href="">Nous contacter</a></li>
+                    <li><a href="">En apprendre plus sur le projet</a></li>
                 </ul>
             </div>
             <div>
-                <p class="title">À propos de GreenPole</p>
+                <p class="title">Notre blog</p>
                 <ul>
-                    <li><a href="">Nous contacter</a></li>
+                    <li><a href="{{url_for('blog.home')}}">Visiter notre blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="title">Notre social</p>
+                <ul>
+                    <li><a href="{{url_for('social.home')}}">Visiter le réseau social</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    {% endif %}
     <div class="container-medium">
         <div class="conditions">
             <p>Conditions d’utilisation</p>
             <p>Politique générale du site</p>
         </div>
-
+        <div class="powered-by">
+            <p>POWERED BY MADJICODE I.T.I.</p>
+        </div>
         <div class="copyrights">
             <p>© 2022-2023, LaPolyVerte, Projet Communautaire PEI</p>
         </div>
