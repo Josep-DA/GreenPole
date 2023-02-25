@@ -9,7 +9,7 @@ domains = [
     "http://192.168.0.129:8080",
     "http://127.0.0.1:8080",
     "http://localhost",
-    "https://greenpole.pythonanywhere.com/",
+    "http://greenpole.pythonanywhere.com",
 ]
 
 endpoints = [
