@@ -9,7 +9,7 @@ domains = [
     "http://192.168.0.129:8080",
     "http://127.0.0.1:8080",
     "http://localhost",
-    "https://greenpole.pythonanywhere.com/",
+    "http://greenpole.pythonanywhere.com",
 ]
 
 endpoints = [
@@ -52,12 +52,12 @@ def is_url_safe(target):
     reference_url = urlparse(host_url)
     test_http_link = urljoin(host_url, target)
     test_url = urlparse(test_http_link)
-    
+
     print(test_url.scheme in ('http', 'https'), '1')
     print(reference_url.netloc == test_url.netloc, 2)
     print(test_http_link, target)
     print(test_http_link in Accepted_endpoints)
-    
+
     return test_url.scheme in ('http', 'https') and reference_url.netloc == test_url.netloc and test_http_link in Accepted_endpoints
 
 
