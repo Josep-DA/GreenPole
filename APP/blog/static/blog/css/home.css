@@ -48,6 +48,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.content-1 .container-medium .container-article .box-article:hover {
+  opacity: 80%;
+}
 .content-1 .container-medium .container-article .box-article {
   margin: 2em 2em;
   height: 15em;
