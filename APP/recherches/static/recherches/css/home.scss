@@ -1,13 +1,19 @@
+.shift {
+    background-color: #6D9886;
+}
+
 .hero {
     background-color: #6D9886;
-    text-align: center;
-    color: rgb(28, 49, 1);
-
-    .container-medium {
-        padding: 2em 0;
+    padding: 2em 0;
+    margin-bottom: 2em;
+    div {
         margin-bottom: 0;
+        text-align: center;
+        h2 {
+            font-weight: 100;
+            font-size: 2.2em;
+        }
     }
-    
 }
 
 .content {
