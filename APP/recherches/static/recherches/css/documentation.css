@@ -87,23 +87,6 @@
   margin: 0 0.5em;
 }
 
-.seperation {
-  z-index: -5;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  top: 39.5em;
-  left: -2.5%;
-  justify-content: space-between;
-}
-.seperation .in-angle {
-  height: 12em;
-  width: 110%;
-  background-color: green;
-  transform: rotate(-6deg);
-  position: absolute;
-}
-
 .content-2 {
   margin-bottom: 5em;
   margin-top: 10em;

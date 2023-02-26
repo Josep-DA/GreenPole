@@ -61,28 +61,12 @@
 }
 
 .signature {
-  margin-bottom: 15em;
+  margin-bottom: 5em;
 }
 .signature .container-medium {
   margin-top: 4em;
 }
 .signature .container-medium .container-text .text {
+  font-size: 1.5em;
   color: rgb(78, 78, 78);
-}
-
-.seperation {
-  z-index: -5;
-  display: flex;
-  position: absolute;
-  width: 110%;
-  top: 105em;
-  justify-content: space-between;
-}
-.seperation .in-angle {
-  height: 10em;
-  width: 100%;
-  background-color: green;
-  transform: rotate(-6deg);
-  position: relative;
-  left: -5%;
 }/*# sourceMappingURL=article.css.map */

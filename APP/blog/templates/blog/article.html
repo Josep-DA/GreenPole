@@ -3,6 +3,7 @@
 {% block head %}
 
 <link rel="stylesheet" href="{{url_for('blog.static', filename='css/' + page_title.lower() + '.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/tools/seperation.css')}}">
 <title>{{ page_title }}</title>
 
 {% endblock %}
@@ -82,10 +83,5 @@
     </div>
 </section>
 
-<div class="seperation">
-    <div class="left-side"></div>
-    <div class="in-angle"></div>
-    <div class="right-side"></div>
-</div>
 
 {% endblock %}

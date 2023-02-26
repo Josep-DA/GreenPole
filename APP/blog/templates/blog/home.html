@@ -19,10 +19,17 @@
 <section class="content-1">
     <div class="container-medium">
         <h2 class="title">
-            <span><a href="{{url_for('blog.article', article_id=1)}}">À la une.</a></span>
+            <span>À la une.</span>
         </h2>
         <div class="container-article">
-            <div class="box-article"></div>
+            <div class="box-article">
+                <a href="{{url_for('blog.article', article_id=1)}}">
+                    <img class="img-article" src="https://journalmetro.com/wp-content/uploads/2021/06/GENERAL_Journee-environnement-26-05-MC-474-mots.jpg?fit=1200%2C630" alt="">
+                <p class="article-title">
+                    Tendons la main à l'environement
+                </p>
+                </a>
+            </div>
             <div class="box-article"></div>
             <div class="box-article"></div>
             <div class="box-article"></div>
