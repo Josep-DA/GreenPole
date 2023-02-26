@@ -72,4 +72,13 @@ button {
   background-color: black;
   border: 4px solid black;
   color: white;
+}
+
+.goto {
+  text-align: center;
+  font-size: 1.4em;
+}
+.goto a {
+  color: #003366;
+  font-weight: 300;
 }/*# sourceMappingURL=register.css.map */
