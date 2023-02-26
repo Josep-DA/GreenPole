@@ -10,4 +10,53 @@
 
 {% block body %}
 
+<div class="container-center">
+    <div class="container-connexion">
+        <h2>Créez votre compte</h2>
+
+        <form class="connexion" action="{{url_for('register')}}">
+            <input
+                class="data-entry"
+                type="text"
+                name=""
+                placeholder="Email"
+            />
+            <input
+                class="data-entry"
+                type="text"
+                name=""
+                placeholder="Username"
+            />
+            <input
+                class="data-entry"
+                type="password"
+                name=""
+                placeholder="Password"
+            />
+            <input
+                class="data-entry"
+                type="password"
+                name=""
+                placeholder="Enter Password Again"
+            />
+            <button id="submit-btn">Register</button>
+        </form>
+    </div>
+    <div class="container-ads">
+        <img
+            src="{{url_for('static', filename='images/polyedu.png')}}"
+            alt="logo-polyedu"
+        />
+        <p>
+            Apprenez les mathématiques, les sciences, le français, l'anglais et
+            encore plus.
+        </p>
+        <p>
+            <a href="https://polyedu.renjen.repl.co"
+                >Visiter les site internet →</a
+            >
+        </p>
+    </div>
+</div>
+
 {% endblock %}

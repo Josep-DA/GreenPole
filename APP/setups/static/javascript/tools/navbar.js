@@ -4,15 +4,15 @@ let lastScrollY = window.scrollY
 
 window.addEventListener("scroll", () => {
 
-    if (lastScrollY + 200 < window.scrollY) {
+    if (lastScrollY + 100 < window.scrollY) {
         header.style = "position:relative;bottom:20em";
         lastScrollY = window.scrollY;
-    } else if (lastScrollY - 200 > window.scrollY) {
+    } else if (lastScrollY - 100 > window.scrollY) {
         header.style = header.style = "bottom:10em"
         lastScrollY = window.scrollY
     }
 
-    if (window.scrollY < 200) {
+    if (window.scrollY < 100) {
         header.style = header.style = "bottom:10em"
     }
 })
