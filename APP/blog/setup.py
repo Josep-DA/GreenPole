@@ -18,12 +18,8 @@ WEBSITE_NAME = blueprint_setup.variables['website_name']
 
 # Create more pages here! ⬇
 
-blueprint_setup.add_template('mission')
-blueprint_setup.add_template('origin')
-blueprint_setup.add_template('founders')
-blueprint_setup.add_template('process')
-blueprint_setup.add_template('documentation')
-blueprint_setup.add_template('FAQ')
+blueprint_setup.add_template('article')
+
 
 
 # Ex.: blueprint_setup.add_page('boutique')

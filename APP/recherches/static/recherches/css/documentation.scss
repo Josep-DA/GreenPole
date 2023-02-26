@@ -1,5 +1,5 @@
 .hero {
-    background-color: #BADCBD;
+    background-color: #6D9886;
     // background-color: lightcyan;
     padding: 2em 0;
     margin-bottom: 2em;
@@ -97,24 +97,6 @@
             }
         }
 
-    }
-}
-
-.seperation {
-    z-index: -5;
-    display: flex;
-    position: absolute;
-    width: 100%;
-    top: 39.5em;
-    left: -2.5%;
-    justify-content: space-between;
-
-    .in-angle {
-        height: 12em;
-        width: 110%;
-        background-color: green;
-        transform: rotate(-6deg);
-        position: absolute;
     }
 }
 

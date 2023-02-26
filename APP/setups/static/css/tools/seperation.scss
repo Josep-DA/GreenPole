@@ -1,0 +1,17 @@
+.seperation {
+    z-index: -5;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 200%;
+    left: -2.5%;
+    justify-content: space-between;
+
+    .in-angle {
+        height: 12em;
+        width: 110%;
+        background-color: green;
+        transform: rotate(-6deg);
+        position: absolute;
+    }
+}
