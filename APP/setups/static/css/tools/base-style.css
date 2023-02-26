@@ -15,6 +15,7 @@ body, ul, p, h2 {
 
 body {
   background-color: whitesmoke;
+  overflow-x: hidden;
 }
 
 a {

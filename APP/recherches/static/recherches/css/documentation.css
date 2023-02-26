@@ -1,1 +1,172 @@
-/*# sourceMappingURL=documentation.css.map */
+.hero {
+  background-color: #BADCBD;
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+.hero div {
+  margin-bottom: 0;
+  text-align: center;
+}
+.hero div h2 {
+  font-weight: 100;
+  font-size: 2.2em;
+}
+
+.content-1 .container-medium {
+  display: flex;
+  flex-direction: column;
+}
+.content-1 .container-medium .title {
+  font-size: 1.6em;
+  position: relative;
+  right: 2em;
+  margin: 1em 0;
+}
+.content-1 .container-medium .title span {
+  margin: 0.5em 0.2em;
+}
+.content-1 .container-medium .title span:hover::after {
+  opacity: 100%;
+}
+.content-1 .container-medium .title span::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0.2em;
+  left: 1em;
+  height: 0.18em;
+  width: 7.5em;
+  background-color: black;
+  border-radius: 10em;
+  opacity: 10%;
+  transition: opacity 0.2s;
+}
+.content-1 .container-medium .container-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.content-1 .container-medium .link:hover .link-title {
+  color: #3a4cb4;
+}
+.content-1 .container-medium .link {
+  background-color: lightblue;
+  width: 20em;
+  height: 7em;
+  padding: 1em;
+  border-radius: 0.75em;
+  margin: 1em 0;
+}
+.content-1 .container-medium .link a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.content-1 .container-medium .link a .link-title {
+  width: 100%;
+  margin: 0.5em 0;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #0C1232;
+}
+.content-1 .container-medium .link a .link-owners {
+  display: block;
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+.content-1 .container-medium .link a .link-owners::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 0.1em;
+  height: 70%;
+  width: 0.2em;
+  background-color: #0C1232;
+  margin: 0 0.5em;
+}
+
+.seperation {
+  z-index: -5;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 39.5em;
+  left: -2.5%;
+  justify-content: space-between;
+}
+.seperation .in-angle {
+  height: 12em;
+  width: 110%;
+  background-color: green;
+  transform: rotate(-6deg);
+  position: absolute;
+}
+
+.content-2 {
+  margin-bottom: 5em;
+  margin-top: 10em;
+}
+.content-2 .container-medium .title {
+  font-size: 1.6em;
+  position: relative;
+  right: 2em;
+  margin: 1em 0;
+}
+.content-2 .container-medium .title span {
+  margin: 0.5em 0.2em;
+}
+.content-2 .container-medium .title span:hover::after {
+  opacity: 100%;
+}
+.content-2 .container-medium .title span::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0.2em;
+  left: 1em;
+  height: 0.18em;
+  width: 6.5em;
+  background-color: black;
+  border-radius: 10em;
+  opacity: 10%;
+  transition: opacity 0.2s;
+}
+.content-2 .container-medium ul {
+  display: flex;
+}
+.content-2 .container-medium ul li {
+  margin: 0.5em 5em 2em;
+  list-style: disc;
+  font-size: 1.3em;
+}
+.content-2 .container-medium .text p {
+  margin: 1em 5em 2em;
+  font-size: 1.3em;
+}
+
+.content-3 .container-medium {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-3 .container-medium .box-article {
+  background-color: rgba(0, 128, 0, 0.87);
+  padding: 0.5em 1.2em;
+  border: 2px solid black;
+  border-radius: 20em;
+  margin: 1em 4em;
+}
+.content-3 .container-medium .box-article a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+.content-3 .container-medium .box-article:hover {
+  background-color: black;
+}
+.content-3 .container-medium .box-article:hover a {
+  color: lightgreen;
+}/*# sourceMappingURL=documentation.css.map */

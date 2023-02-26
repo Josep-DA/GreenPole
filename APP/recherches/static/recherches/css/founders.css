@@ -1,1 +1,172 @@
-/*# sourceMappingURL=founders.css.map */
+.hero {
+  background-color: #BADCBD;
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+.hero div {
+  margin-bottom: 0;
+  text-align: center;
+}
+.hero div h2 {
+  font-weight: 100;
+  font-size: 2.2em;
+}
+
+.content-1 .container-medium {
+  display: flex;
+  flex-direction: column;
+}
+.content-1 .container-medium .title {
+  font-size: 1.6em;
+  position: relative;
+  right: 2em;
+  margin: 1em 0;
+}
+.content-1 .container-medium .title span {
+  margin: 0.5em 0.2em;
+}
+.content-1 .container-medium .title span:hover::after {
+  opacity: 100%;
+}
+.content-1 .container-medium .title span::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0.2em;
+  left: 1em;
+  height: 0.18em;
+  width: 6em;
+  background-color: black;
+  border-radius: 10em;
+  opacity: 10%;
+  transition: opacity 0.2s;
+}
+.content-1 .container-medium .container-swipe {
+  margin: 1em 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-1 .container-medium .container-swipe .left, .content-1 .container-medium .container-swipe .right {
+  display: flex;
+  height: 3em;
+  width: 3em;
+  background-color: lightblue;
+  border-radius: 10em;
+  justify-content: center;
+  align-items: center;
+}
+.content-1 .container-medium .container-swipe .left:hover, .content-1 .container-medium .container-swipe .right:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+.content-1 .container-medium .container-swipe .container-img {
+  margin: 0 12em;
+  text-align: center;
+}
+.content-1 .container-medium .container-swipe .container-img img {
+  height: 20em;
+  border: 2px solid white;
+  border-radius: 2em;
+  box-shadow: 2em 1.5em 2em 0.5em rgba(255, 255, 255, 0.233);
+}
+.content-1 .container-medium .container-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-1 .container-medium .container-text .name {
+  font-size: 2em;
+}
+.content-1 .container-medium .container-text .text {
+  margin-top: 2em;
+  width: 60%;
+}
+.content-1 .container-medium .container-text .text p {
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+
+.seperation {
+  z-index: -5;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 39.5em;
+  left: -2.5%;
+  justify-content: space-between;
+}
+.seperation .in-angle {
+  height: 12em;
+  width: 110%;
+  background-color: green;
+  transform: rotate(-6deg);
+  position: absolute;
+}
+
+.content-2 {
+  margin-bottom: 5em;
+  margin-top: 10em;
+}
+.content-2 .container-medium .title {
+  font-size: 1.6em;
+  position: relative;
+  right: 2em;
+  margin: 1em 0;
+}
+.content-2 .container-medium .title span {
+  margin: 0.5em 0.2em;
+}
+.content-2 .container-medium .title span:hover::after {
+  opacity: 100%;
+}
+.content-2 .container-medium .title span::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0.2em;
+  left: 1em;
+  height: 0.18em;
+  width: 6.5em;
+  background-color: black;
+  border-radius: 10em;
+  opacity: 10%;
+  transition: opacity 0.2s;
+}
+.content-2 .container-medium ul {
+  display: flex;
+}
+.content-2 .container-medium ul li {
+  margin: 0.5em 5em 2em;
+  list-style: disc;
+  font-size: 1.3em;
+}
+.content-2 .container-medium .text p {
+  margin: 1em 5em 2em;
+  font-size: 1.3em;
+}
+
+.content-3 .container-medium {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-3 .container-medium .box-article {
+  background-color: rgba(0, 128, 0, 0.87);
+  padding: 0.5em 1.2em;
+  border: 2px solid black;
+  border-radius: 20em;
+  margin: 1em 4em;
+}
+.content-3 .container-medium .box-article a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+.content-3 .container-medium .box-article:hover {
+  background-color: black;
+}
+.content-3 .container-medium .box-article:hover a {
+  color: lightgreen;
+}/*# sourceMappingURL=founders.css.map */
