@@ -1,4 +1,5 @@
 {% extends "tools/model.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block head %}
 
@@ -13,33 +14,24 @@
 <div class="container-center">
     <div class="container-connexion">
         <h2>Créez votre compte</h2>
-
-        <form class="connexion" action="{{url_for('register')}}">
-            <input
-                class="data-entry"
-                type="text"
-                name=""
-                placeholder="Email"
-            />
-            <input
-                class="data-entry"
-                type="text"
-                name=""
-                placeholder="Username"
-            />
-            <input
-                class="data-entry"
-                type="password"
-                name=""
-                placeholder="Password"
-            />
-            <input
-                class="data-entry"
-                type="password"
-                name=""
-                placeholder="Enter Password Again"
-            />
-            <button id="submit-btn">Register</button>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              {% if reconnect %}
+                <p style="color:red;" >{{ message }} If you have an account, <a href="{{url_for('login')}}">try to reconnect.</a></p>
+              {% else %}
+                <p>{{ message }}</p>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <form class="connexion" method="POST" action="{{url_for('register')}}">
+            {{ form.hidden_tag() }}
+            {{ form.email }}
+            {{ form.username }}
+            {{ form.password }}
+            {{ form.password2 }}
+            {{ form.submit }}
             <p class="goto">Vous avez déjà un compte? <a href="{{url_for('login')}}">Connectez-vous.</a></p>
         </form>
     </div>

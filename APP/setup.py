@@ -1,14 +1,12 @@
 from flask import url_for
 from .setups.server_setup import ServerSetup
 from .crud_ops import *
-from .app_db import this_app_setup as app_setup
+from .setups import app_setup
 
 app = app_setup.app
 
 with app.app_context():
         db.create_all()
-
-app_setup.create_root()
 
 
 # Blueprints

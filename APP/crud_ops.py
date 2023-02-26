@@ -1,5 +1,5 @@
 from .models import *
-from .app_db import db
+from .setups import db
 
 
 def create(table, return_: bool = False, **data):

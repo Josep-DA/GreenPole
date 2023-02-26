@@ -15,8 +15,10 @@ class AppSetup(UrlManager):
 
         super().__init__()
     
-    def create_app(self):        
+    def create_app(self):   
+        from .config import Config     
         app = Flask(__name__)
+        app.config.from_object(Config)
         return app
 
     def create_root(self):
