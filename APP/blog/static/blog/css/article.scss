@@ -1,0 +1,102 @@
+.title {
+    font-size: 2em;
+}
+
+.top-hero {
+    margin-bottom: 2em;
+    .container-top-image {
+        padding-bottom: .5em;
+
+        img {
+            width: 100%;
+            height: 30em;
+            object-fit: cover;
+
+        }
+
+        .container-medium {
+            .title::before {
+                content: '';
+                display: inline-block;
+                background-color: green;
+                height: 1.2em;
+                width: .2em;
+                border-radius: 10em;
+                position: relative;
+                top: .2em;
+            }
+
+            .title {
+                margin: 1em -2em 1em;
+            }
+
+            address {
+                font-size: 1.1em;
+                line-height: 1.2em;
+            }
+        }
+    }
+}
+
+.text {
+    font-size: 1.2em;
+}
+
+.content {
+    .container-medium {
+        margin: 2em 13em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .container-text {
+            margin: 0 2em;
+            font-size: 1.2em;
+            .text {
+                line-height: 1.5em;
+            }
+        }
+
+        .container-image {
+            margin: 0 2em;
+
+            img {
+                background-color: black;
+                height: 15em;
+                width: 15em;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.signature {
+    margin-bottom: 15em;
+    .container-medium {
+        margin-top: 4em;
+
+        .container-text {
+            .text {
+                color: rgb(78, 78, 78);
+            }
+        }
+    }
+}
+
+.seperation {
+    z-index: -5;
+    display: flex;
+    position: absolute;
+    width: 110%;
+    top: 105em;
+    justify-content: space-between;
+
+    .in-angle {
+        height: 10em;
+        width: 100%;
+        background-color: green;
+        transform: rotate(-6deg);
+        position: relative;
+        left: -5%;
+    }
+}
