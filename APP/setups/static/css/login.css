@@ -2,11 +2,16 @@ body {
   background-color: #003366;
 }
 
+.shift {
+  background-color: #003366;
+}
+
 h2 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
   color: rgb(2, 11, 65);
+  margin: 0 0 1em;
 }
 
 .container-center {
@@ -15,12 +20,33 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 8em 0;
+}
+.container-center div {
+  margin: 0 8em;
 }
 
 .container-connexion {
-  background-color: rgb(174, 213, 248);
+  background-color: whitesmoke;
   padding: 1.5em 1.5em 1em;
   border-radius: 1em;
+}
+
+.container-ads {
+  background-color: whitesmoke;
+  border-radius: 1.5em;
+  max-width: 20em;
+}
+.container-ads img {
+  width: 100%;
+  border-radius: 1em;
+}
+.container-ads p {
+  margin: 1.5em;
+  font-size: 1.5em;
+}
+.container-ads p a {
+  color: rgb(2, 11, 65);
 }
 
 .connexion {
@@ -30,7 +56,7 @@ h2 {
 
 input,
 button {
-  margin: 0.5em;
+  margin: 1em 1.5em;
   padding: 0.5em;
   border-radius: 15px;
   text-align: center;
@@ -39,7 +65,7 @@ button {
 }
 
 .data-entry {
-  border: 4px solid rgb(0, 167, 139);
+  border: 4px solid #8ACE31;
 }
 
 #submit-btn:hover {

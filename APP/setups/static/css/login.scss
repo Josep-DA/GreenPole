@@ -1,49 +1,79 @@
 body {
-    background-color: #003366;
-  }
+  background-color: #003366;
+}
 
-  h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: rgb(2, 11, 65);
-  }
+.shift {
+  background-color: #003366;
+}
 
-  .container-center {
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: rgb(2, 11, 65);
+  margin: 0 0 1em;
+}
+
+.container-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8em 0;
+
+  div {
+    margin: 0 8em;
+  }
+}
+
+.container-connexion {
+  background-color: whitesmoke;
+  padding: 1.5em 1.5em 1em;
+  border-radius: 1em;
+}
+
+.container-ads {
+  background-color: whitesmoke;
+  border-radius: 1.5em;
+  max-width: 20em;
+
+  img {
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container-connexion {
-    background-color: rgb(174, 213, 248);
-    padding: 1.5em 1.5em 1em;
     border-radius: 1em;
   }
 
-  .connexion {
-    display: flex;
-    flex-direction: column;
-  }
+  p {
+    margin: 1.5em;
+    font-size: 1.5em;
 
-  input,
-  button {
-    margin: 0.5em;
-    padding: 0.5em;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 1.2em;
-    border: 4px solid;
+    a {
+      color:rgb(2, 11, 65);
+    }
   }
+}
 
-  .data-entry {
-    border: 4px solid rgb(0, 167, 139);
-  }
+.connexion {
+  display: flex;
+  flex-direction: column;
+}
 
-  #submit-btn:hover {
-    background-color: black;
-    border: 4px solid black;
-    color: white;
-  }
+input,
+button {
+  margin: 1em 1.5em;
+  padding: 0.5em;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.2em;
+  border: 4px solid;
+}
+
+.data-entry {
+  border: 4px solid #8ACE31;
+}
+
+#submit-btn:hover {
+  background-color: black;
+  border: 4px solid black;
+  color: white;
+}
