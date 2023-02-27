@@ -81,4 +81,10 @@ button {
 .goto a {
   color: #003366;
   font-weight: 300;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.25em;
+  text-align: center;
 }/*# sourceMappingURL=register.css.map */

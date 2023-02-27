@@ -21,6 +21,11 @@ class CreatePostForm(FlaskForm):
 
 
 class RegisterForm(FlaskForm):
+    firstname = StringField(validators=[DataRequired()], 
+                           render_kw={"class_":"data-entry", "placeholder":"First Name"})
+    lastname = StringField(validators=[DataRequired()], 
+                           render_kw={"class_":"data-entry", "placeholder":"Last Name"})
+
     email = EmailField(validators=[DataRequired(), Email()],
                         render_kw={"class":"data-entry", "placeholder": "Email"})
     
@@ -36,9 +41,13 @@ class RegisterForm(FlaskForm):
     submit = SubmitField(render_kw={"id":"submit-btn"})
 
     def reset_form(self):
-        self.email.data = ''
-        self.password.data = ''
-        self.name.data = ''
+        self.firstname = ''
+        self.lastname = ''
+        self.email = ''
+        self.username = ''
+        self.password = ''
+        self.password2 = ''
+        self.submit = ''
 
 
 class LoginForm(FlaskForm):

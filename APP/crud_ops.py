@@ -2,19 +2,10 @@ from .models import *
 from .setups import db
 
 
-def create(table, return_: bool = False, **data):
-    arguments = ""
-    values = []
-    n = 0
-    for (name, value) in data.items():
-        values.append(value)
-        arguments += f"{name}=values[{n}], "
-        n += 1
-    item = eval(f"{table}({arguments[:-2]})")
+def create_user(table, firstname, lastname, username, email, password):
+    item = eval(f"{table}(firstname=firstname, lastname=lastname, username=username, email=email, password=password)")
     db.session.add(item)
     db.session.commit()
-    if return_:
-        return item
 
 
 def get(table_name, id_):
@@ -27,11 +18,17 @@ def read_by_order(table_name, col_name):
     return item
 
 
-def read(table_name, col_name, value):
-    if '\'' in value:
-        value = value.replace('\'', "\\'")
-    item = eval(f"{table_name}.query.filter_by({col_name}='{value}').first()")
-    return item
+def read(table_name, col_name, value, all_: bool = False):
+    if all_:
+        if '\'' in value:
+            value = value.replace('\'', "\\'")
+        item = eval(f"{table_name}.query.filter_by({col_name}='{value}').all()")
+        return item
+    else:
+        if '\'' in value:
+            value = value.replace('\'', "\\'")
+        item = eval(f"{table_name}.query.filter_by({col_name}='{value}').first()")
+        return item
 
 
 def read_all(table_name):
@@ -63,4 +60,3 @@ def make_list(table_name):
         data_list[n] = item.to_dict()
         n += 1
     return data_list
-

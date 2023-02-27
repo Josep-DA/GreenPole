@@ -20,13 +20,17 @@
               {% if reconnect %}
                 <p style="color:red;" >{{ message }} If you have an account, <a href="{{url_for('login')}}">try to reconnect.</a></p>
               {% else %}
-                <p>{{ message }}</p>
+                <p class="error-message">
+                  {{ message }}
+                </p>
               {% endif %}
             {% endfor %}
           {% endif %}
         {% endwith %}
         <form class="connexion" method="POST" action="{{url_for('register')}}">
             {{ form.hidden_tag() }}
+            {{ form.firstname }}
+            {{ form.lastname }}
             {{ form.email }}
             {{ form.username }}
             {{ form.password }}

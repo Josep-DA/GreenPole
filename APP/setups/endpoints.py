@@ -50,23 +50,29 @@ def register():
     if form.validate_on_submit():
 
         user = read('User', 'email', form.email.data)
+        print(user)
+
         if user is None:
-            password = generate_password_hash(
+            user_firstname = form.firstname.data
+            user_lastname = form.lastname.data
+            user_email = form.email.data
+            user_username = form.username.data
+            user_password = generate_password_hash(
                 password=form.password.data,
                 method='pbkdf2:sha256',
-                salt_length=10)
+                salt_length=25)
 
-            user = create('User', return_=True, email=form.email.data,
-                          password=password, name=form.name.data)
+            user = create_user('User', user_firstname, user_lastname, user_username, user_email, user_password)
             form.reset_form()
 
             # login_user(user)
             flash('Registered successfully.')
 
-            return secure_redirect(url_for('get_all_posts'))
+            return secure_redirect('home', _bp_=False)
         else:
             flash('The email entered is already used.')
-            return secure_redirect(url_for('register'))
+            del user
+            return secure_redirect('register', _bp_=False)
         
     return render_page('register', website_name=WEBSITE_NAME, form=form, add_navbar_footer=True, page_title="Register", current_li='app')
 
