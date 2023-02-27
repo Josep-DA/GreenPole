@@ -16,6 +16,8 @@ domains = [
 endpoints = [
     '/',
     '/home',
+    '/login',
+    '/register',
     '/device_model',
 
     '/main/',
