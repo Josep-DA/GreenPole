@@ -1,6 +1,7 @@
+from .setups import app_setup
+
 def start_app(deployment: str = ''):
     from flask import url_for
-    from .setups import app_setup
     from .setups.server_setup import ServerSetup
     from .main import bp as main_bp
     from .recherches import bp as recherches_bp
