@@ -1,9 +1,13 @@
 from flask import Flask, Blueprint
 from ..url_manager import UrlManager
 
+
 class AppSetup(UrlManager):
     def __init__(self, website_name: tuple):
         self.name = 'app'
+
+        self.login_manager = None
+        self.db = None
 
         self.app: Flask = self.create_app()
 
@@ -11,17 +15,16 @@ class AppSetup(UrlManager):
 
         super().__init__()
     
-    def create_app(self):
-        from .config import Config as config_object
-        
+    def create_app(self):   
+        from .config import Config     
         app = Flask(__name__)
-        app.config.from_object(config_object)
+        app.config.from_object(Config)
+        return app
 
-        @app.route('/')
+    def create_root(self):
+        @self.app.route('/')
         def root():
             return self.render_tool('device_model', add_navbar_footer=False, redirect_back_to='home')
-    
-        return app
 
     def set_variables(self, website_name):
         variables = {

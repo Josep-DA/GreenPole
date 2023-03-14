@@ -2,24 +2,52 @@
 
 {% block head %}
 
-<link rel="stylesheet" href="{{url_for('static', filename='css/' + page_title.lower() + '.css')}}">
+<link
+    rel="stylesheet"
+    href="{{url_for('static', filename='css/' + page_title.lower() + '.css')}}"
+/>
 <title>{{ page_title }}</title>
 
-{% endblock %}
-
-
-{% block body %}
+{% endblock %} {% block body %}
 
 <div class="container-center">
-      <div class="container-connexion">
+    <div class="container-connexion">
         <h2>Connectez-vous</h2>
-        
-        <form class="connexion" action="{{url_for('login')}}">
-          <input class="data-entry" type="text" name="" placeholder="Username"/>
-          <input class="data-entry" type="password" name="" placeholder="Password"/>
-          <button id="submit-btn">Connexion</button>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+                    <p class="error-message">
+                        {{ message }}
+                    </p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form class="connexion" method="POST" action="{{url_for('login')}}">
+            {{ form.hidden_tag() }}
+            {{ form.username }}
+            {{ form.password }}
+            {{ form.submit }}
+            <p class="goto">Vous n'avez pas de compte? <a href="{{url_for('register')}}">Créez-vous un nouveau compte.</a></p>
         </form>
-      </div>
+        
     </div>
+    <div class="container-ads">
+        <img
+            src="{{url_for('static', filename='images/polyedu.png')}}"
+            alt="logo-polyedu"
+        />
+        <p>
+            Apprenez les mathématiques, les sciences, le français, l'anglais et
+            encore plus.
+        </p>
+        <p>
+            <a href="https://polyedu.renjen.repl.co"
+                >Visiter les site internet →</a
+            >
+        </p>
+    </div>
+</div>
 
 {% endblock %}

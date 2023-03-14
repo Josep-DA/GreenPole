@@ -1,0 +1,95 @@
+body {
+    background-color: #003366;
+}
+  
+.shift {
+background-color: #003366;
+}
+
+h2 {
+text-align: center;
+text-transform: uppercase;
+font-weight: 300;
+color: rgb(2, 11, 65);
+margin: 0 0 1em;
+}
+
+.container-center {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 8em 0;
+
+div {
+    margin: 0 8em;
+}
+}
+
+.container-connexion {
+background-color: whitesmoke;
+padding: 1.5em 1.5em 1em;
+border-radius: 1em;
+}
+
+.container-ads {
+background-color: whitesmoke;
+border-radius: 1.5em;
+max-width: 20em;
+
+img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+p {
+    margin: 1.5em;
+    font-size: 1.5em;
+
+    a {
+    color:rgb(2, 11, 65);
+    }
+}
+}
+
+.connexion {
+display: flex;
+flex-direction: column;
+}
+
+input,
+button {
+margin: 1em 1.5em;
+padding: 0.5em;
+border-radius: 15px;
+text-align: center;
+font-size: 1.2em;
+border: 4px solid;
+}
+
+.data-entry {
+border: 4px solid #8ACE31;
+}
+
+#submit-btn:hover {
+background-color: black;
+border: 4px solid black;
+color: white;
+}
+
+.goto {
+    text-align: center;
+    font-size: 1.4em;
+  
+    a {
+      color: #003366;
+      font-weight: 300;
+    }
+}
+
+.error-message {
+    color:red;
+    font-size: 1.25em;
+    text-align: center;
+  }

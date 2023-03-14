@@ -1,0 +1,72 @@
+.title {
+  font-size: 2em;
+}
+
+.top-hero {
+  margin-bottom: 2em;
+}
+.top-hero .container-top-image {
+  padding-bottom: 0.5em;
+}
+.top-hero .container-top-image img {
+  width: 100%;
+  height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.top-hero .container-top-image .container-medium .title::before {
+  content: "";
+  display: inline-block;
+  background-color: green;
+  height: 1.2em;
+  width: 0.2em;
+  border-radius: 10em;
+  position: relative;
+  top: 0.2em;
+}
+.top-hero .container-top-image .container-medium .title {
+  margin: 1em -2em 1em;
+}
+.top-hero .container-top-image .container-medium address {
+  font-size: 1.1em;
+  line-height: 1.2em;
+}
+
+.text {
+  font-size: 1.2em;
+}
+
+.content .container-medium {
+  margin: 2em 13em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content .container-medium .container-text {
+  margin: 0 2em;
+  font-size: 1.2em;
+}
+.content .container-medium .container-text .text {
+  line-height: 1.5em;
+}
+.content .container-medium .container-image {
+  margin: 0 2em;
+}
+.content .container-medium .container-image img {
+  background-color: black;
+  height: 15em;
+  width: 15em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.signature {
+  margin-bottom: 5em;
+}
+.signature .container-medium {
+  margin-top: 4em;
+}
+.signature .container-medium .container-text .text {
+  font-size: 1.5em;
+  color: rgb(78, 78, 78);
+}/*# sourceMappingURL=article.css.map */
