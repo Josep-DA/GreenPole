@@ -1,0 +1,44 @@
+.content-1 .container-medium .title {
+  font-size: 1.6em;
+  margin: 1em 0;
+  color: rgba(4, 11, 51, 0.7058823529);
+}
+.content-1 .container-medium .title span {
+  border-bottom: 2px solid black;
+}
+.content-1 .container-medium .title span:hover::after {
+  opacity: 100%;
+}
+.content-1 .container-medium .all-uls {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.content-1 .container-medium .all-uls .container-ul-content {
+  margin: 1.5em 5em;
+}
+.content-1 .container-medium .ul-container::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0.1em;
+  margin-right: 1em;
+  background-color: black;
+}
+.content-1 .container-medium .ul-container {
+  height: 6em;
+  display: flex;
+  position: relative;
+  left: 2em;
+}
+.content-1 .container-medium .ul-container ul li {
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+}
+.content-1 .container-medium .ul-container ul li span {
+  font-weight: bold;
+}
+.content-1 .container-medium .ul-container ul li .change, .content-1 .container-medium .ul-container ul li .more {
+  color: blue;
+  font-size: 1em;
+}/*# sourceMappingURL=profile.css.map */

@@ -19,16 +19,20 @@
                         <a href="{{url_for('recherches.root')}}">Recherches</a>
                     </li>
                 </ul>
-                {% if website_command[1] == False %}
                 <ul class="connexion">
-                    <li class="se-connecter">
-                        <a href="{{url_for('login')}}">Se connecter</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('register')}}">Créer un compte</a>
-                    </li>
+                    {% if website_command[1] == False %}
+                        <li class="se-connecter">
+                            <a href="{{url_for('login')}}">Se connecter</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('register')}}">Créer un compte</a>
+                        </li>
+                    {% elif website_command[1] == True %}
+                        <li class="profile">
+                            <a href="{{url_for('profile')}}">Profile</a>
+                        </li>
+                    {% endif %}
                 </ul>
-                {% endif %}
             </nav>
         </div>
     </div>

@@ -1,6 +1,5 @@
 from .setups import db
 from flask_login import UserMixin
-from sqlalchemy.orm import relationship
 import datetime
 
 
@@ -17,6 +16,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(30), unique=True, nullable=False)
     email = db.Column(db.String(40), unique=True, nullable=False)
     password = db.Column(db.String(250), nullable=False)
+    creation_date = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
     author = db.relationship('Author', backref='user', uselist=False)
     

@@ -1,0 +1,82 @@
+{% extends "tools/model.html" %}
+
+{% block head %}
+
+<link
+    rel="stylesheet"
+    href="{{url_for('static', filename='css/' + page_title.lower() + '.css')}}"
+/>
+<title>{{ page_title }}</title>
+
+{% endblock %} {% block body %}
+
+
+<section class="hero">
+    <div class="container-medium">
+        <h2>« Personne n'a connaissance de vos informations mise-à-part vous. <a href="url_for('politique')">Voir la politique de confidentialité.</a> »</h2>
+    </div>
+</section>
+
+<section class="content-1">
+    <div class="container-medium">
+        <div class="all-uls">
+            <div class="container-ul-content">
+                <h2 class="title">
+                    <span>Informations Personnelles</span>
+                </h2>
+                <div class="ul-container">
+                    <ul>
+                        <li>
+                            <span>first name: </span>Joseph
+                        </li>
+                        <li>
+                            <span>last name: </span>first_name
+                        </li>
+                        <li>
+                            <span>email: </span>first_name
+                        </li>
+                        <li>
+                            <a href="{{url_for('home')}}" class="more">Plus</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-ul-content">
+                <h2 class="title">
+                    <span>Informations De Connection</span>
+                </h2>
+                <div class="ul-container">
+                    <ul>
+                        <li>
+                            <span>Mot de passe: </span>************ <a href="{{url_for('home')}}" class="change">Modifier</a>
+                        </li>
+                        <li>
+                            <span>Username: </span>first_name
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-ul-content">
+                <h2 class="title">
+                    <span>Informations Sur le Compte</span>
+                </h2>
+                <div class="ul-container">
+                    <ul>
+                        <li>
+                            <span>Date de création: </span>2008-12-05
+                        </li>
+                        <li>
+                            <span>User id: </span>1
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+{% endblock %}

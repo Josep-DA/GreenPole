@@ -1,3 +1,23 @@
+.hero {
+    background-color: #6D9886;
+    padding: 2em 0;
+    margin-bottom: 2em;
+    div {
+        margin-bottom: 0;
+        text-align: center;
+        h2 {
+            font-weight: 100;
+            font-size: 2em;
+
+            a {
+                color: lightcyan;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
 .container-medium {
     margin: 0 10em;
     margin-bottom: 2em;
@@ -99,7 +119,13 @@ header {
                             color: rgb(169, 231, 252);
                         }
                     }
+
+                    .profile {
+                        padding: .4em 1em;
+                        background-color: #6D9886;
+                    }
     
+
                     li:hover a {
                         color: #181D31;
                     }

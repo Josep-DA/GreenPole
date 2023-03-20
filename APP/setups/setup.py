@@ -2,7 +2,7 @@ from flask_ckeditor import CKEditor
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
 from flask_bootstrap import Bootstrap
-# from flask_login import LoginManager
+from flask_login import LoginManager
 from flask_gravatar import Gravatar
 
 # Import the App
@@ -17,13 +17,13 @@ app = app_setup.app
 CKEditor(app)
 Bootstrap(app)
 CSRFProtect(app)
-# login_manager = LoginManager(app)
+login_manager = LoginManager(app)
 
-# login_manager.login_view = "login"
-# login_manager.login_message = "Please log in to add, modify or delete a post. " \
-#                               "* Only administrators can do those operations. " \
-#                               "Contact the supervisor if you are not able to do so with an administrator account. *"
-# login_manager.login_message_category = "info"
+login_manager.login_view = "login"
+login_manager.login_message = "Please log in to add, modify or delete a post. " \
+                              "* Only administrators can do those operations. " \
+                              "Contact the supervisor if you are not able to do so with an administrator account. *"
+login_manager.login_message_category = "info"
 
 
 db = SQLAlchemy(app)
@@ -46,6 +46,7 @@ WEBSITE_NAME = app_setup.variables['website_name']
 
 app_setup.add_template('login')
 app_setup.add_template('register')
+app_setup.add_template('profile')
 
 
 # Ex.: app_setup.add_page('boutique')

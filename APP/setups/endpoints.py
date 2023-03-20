@@ -1,15 +1,22 @@
-from flask import url_for, flash
-from .setup import app, render_page, variables, WEBSITE_NAME, secure_redirect
+from flask import flash
+from flask_login import login_user, login_required, logout_user, current_user
+from .setup import app, render_page, variables, WEBSITE_NAME, secure_redirect, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 from ..forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from ..crud_ops import *
+
+# -------- Configuration -------- #
+
+@login_manager.user_loader
+def load_user(user_id):
+    return get('User', user_id)
 
 # -------- Pages' endpoints -------- #
 
 # La page home est une page servant à diriger les utilisateurs vers les autres pages de la section recherches.
 @app.route('/home')
 def home():
-    return render_page('home', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Home", current_li='app', disable_extra_part=False)
+    return render_page('home', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Home", current_li='app', disable_extra_part=(current_user.is_authenticated))
 
 # #
 
@@ -20,11 +27,12 @@ def login():
     if form.validate_on_submit():
         print(form.username.data)
 
-        user = read('User', 'email', form.username.data)
+        user = read('User', 'username', form.username.data)
         if user is not None:
             password = user.password
+            print(check_password_hash(password, form.password.data), 'sdfusdygfuyjgfiuadst7fbiucylisabyfivbafniuesbh')
             if check_password_hash(password, form.password.data):
-                # login_user(user)
+                login_user(user)
                 pass
             else:
                 flash('Le nom d\'utilisateur ou le mot de passe est incorrect.', 'danger')
@@ -38,7 +46,7 @@ def login():
 
         return secure_redirect('home', _bp_=False)
 
-    return render_page('login', website_name=WEBSITE_NAME, form=form, add_navbar_footer=True, page_title="Login", current_li='app')
+    return render_page('login', website_name=WEBSITE_NAME, form=form, add_navbar_footer=True, page_title="Login", current_li='app', disable_extra_part=None)
 
 # #
 
@@ -74,7 +82,24 @@ def register():
             del user
             return secure_redirect('register', _bp_=False)
         
-    return render_page('register', website_name=WEBSITE_NAME, form=form, add_navbar_footer=True, page_title="Register", current_li='app')
+    return render_page('register', website_name=WEBSITE_NAME, form=form, add_navbar_footer=True, page_title="Register", current_li='app', disable_extra_part=None)
+
+# #
+
+# La page profile est une page servant à observer ses informations personnelles.
+@app.route('/profile', methods=['Post', 'Get'])
+def profile():
+     
+    return render_page('profile', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Profile", current_li='app')
+
+# #
+
+
+# La page logout est une page servant à déconnecter les utilisateurs.
+@app.route('/logout', methods=['Get'])
+def logout():
+    logout_user()
+    return secure_redirect('home', _bp_=False)
 
 # #
 

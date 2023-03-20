@@ -2,36 +2,6 @@
   font-size: 2em;
 }
 
-.hero {
-  background-color: #6D9886;
-  padding: 2em;
-  border-bottom: 0.1em solid white;
-  margin-bottom: 2em;
-}
-.hero .container-medium {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 1em;
-  margin: 0 1em;
-  padding: 0.5em 5em;
-}
-.hero .container-medium .hero-text {
-  width: 50%;
-  font-size: 2em;
-  line-height: 2em;
-}
-.hero .container-medium .hero-text p {
-  color: #32494B;
-}
-.hero .container-medium .hero-image {
-  width: 50%;
-}
-.hero .container-medium .hero-image img {
-  width: 100%;
-  border-radius: 1em;
-}
-
 .content-1 {
   margin-bottom: 20em;
 }
