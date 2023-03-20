@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+from .setups import app_setup
+
+def start_app(deployment: str = ''):
+    from flask import url_for
+    from .setups.server_setup import ServerSetup
+    from .main import bp as main_bp
+    from .recherches import bp as recherches_bp
+    from .blog import bp as blog_bp
+    from .social import bp as social_bp
+=======
 from flask import url_for
 from .setups.server_setup import ServerSetup
 from .crud_ops import *
@@ -10,6 +21,7 @@ app = app_setup.app
 #     db.create_all()
 
 
+>>>>>>> 5f0a88347fbf9724453f9ba07dd8031dfc3649d6
 
 # Blueprints
 from .main import bp as main_bp
