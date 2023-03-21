@@ -14,8 +14,15 @@ body, ul, p, h2 {
 }
 
 body {
+<<<<<<< HEAD
+  background-color: white;
+  /* background-color: #F7F2EC;
+  background: rgb(204, 201, 191);
+  background: linear-gradient(90deg, rgb(204, 201, 191) 0%, rgb(247, 242, 224) 49%, rgb(204, 201, 191) 100%); */
+=======
   background-color: whitesmoke;
   overflow-x: hidden;
+>>>>>>> 5f0a88347fbf9724453f9ba07dd8031dfc3649d6
 }
 
 a {

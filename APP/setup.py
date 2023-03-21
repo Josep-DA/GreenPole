@@ -1,15 +1,5 @@
-from flask import url_for
-from .setups.server_setup import ServerSetup
-from .crud_ops import *
 from .setups import app_setup
-
-app = app_setup.app
-
-# with app.app_context():
-#     db.drop_all()
-#     db.create_all()
-
-
+from .setups.server_setup import ServerSetup
 
 # Blueprints
 from .main import bp as main_bp
@@ -25,7 +15,7 @@ app_setup.register_blueprint(social_bp)
 
 
 # Create server & Link app to server
-server_setup = ServerSetup(_app_=app)
+server_setup = ServerSetup(_app_=app_setup.app)
 
 
 # Run server
