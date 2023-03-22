@@ -45,7 +45,7 @@ class Article(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     creationdate = db.Column(db.DateTime, nullable=False, default=datetime.datetime.utcnow)
-    image = db.Column(db.String(50), nullable=False)
+    image = db.Column(db.String(50), nullable=True)
     content = db.Column(db.String(5000), nullable=False)
     author_name = db.Column(db.String(100), nullable=False)
     author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
@@ -54,8 +54,8 @@ class Article(db.Model, UserMixin):
         return {column.name: getattr(self, column.name) for column in self.__table__.columns}
 
     def __repr__(self):
-        return f"<{self.__tablename__}: '{self.firstname}', '{self.lastname}', '{self.username}'," \
-            f"'{self.email}', '{self.sq}', '{self.sqanswer}', '{self.password}' >"
+        return f"<{self.__tablename__}: '{self.title}', '{self.creationdate}', '{self.image}'," \
+            f"'{self.content}', '{self.author_name}', '{self.author_id}'>"
 
 # class Comment(db.Model, UserMixin):
 #     __tablename__ = "comments"

@@ -29,6 +29,7 @@ endpoints = [
 
     '/blog/',
     '/blog/home',
+    '/blog/editing',
 
     '/recherches/',
     '/recherches/home',

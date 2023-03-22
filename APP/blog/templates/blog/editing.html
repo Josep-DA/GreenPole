@@ -1,0 +1,40 @@
+{% extends "tools/model.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('blog.static', filename='css/' + page_title.lower() + '.css')}}">
+<title>{{ page_title }}</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+<section class="hero">
+    <div class="container-medium">
+        <h2>« Être informer pour être balancer »</h2>
+    </div>
+</section>
+<div class="container-center">
+    <div class="container-connexion">
+        <h2>Connectez-vous</h2>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+                    <p class="error-message">
+                        {{ message }}
+                    </p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form class="connexion" method="POST" action="{{url_for('blog.editing')}}">
+            {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+        </form>
+        
+    </div>
+</div>
+
+
+{% endblock %}

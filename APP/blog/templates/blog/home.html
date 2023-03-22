@@ -21,19 +21,43 @@
         <h2 class="title">
             <span>À la une.</span>
         </h2>
+
         <div class="container-article">
-            <a href="{{url_for('blog.article', article_id=1)}}">
+            <a href="{{url_for('blog.example_article', article_id=1)}}">
                 <div class="box-article">
                     <img class="img-article" src="https://journalmetro.com/wp-content/uploads/2021/06/GENERAL_Journee-environnement-26-05-MC-474-mots.jpg?fit=1200%2C630" alt="">
                     <p class="article-title">
-                        Tendons la main à l'environement
+                        <span>Tendonsgdfgmaid
+                            fgfdgdfgdfgdfnl'
+                            efgfdgdfgdfg
+                            dfgnvi
+                            vutvutvuvjgvjhvjg</span>
                     </p>
                 </div>
             </a>
             
-            <div class="box-article"></div>
-            <div class="box-article"></div>
-            <div class="box-article"></div>
+            {% for article in all_articles %}
+                <a href="{{url_for('blog.article', article_id=article.id)}}">
+                    <div class="box-article">
+                        {% if article.image != None %}
+                            <img class="img-article" src="{{ article.image }}" alt="">
+                        {% endif %}
+
+                        <p class="article-title">
+                            <span>
+                                {% if article.title|length > 50 %}
+                                {% for char in article.title.split()[:10] %}
+                                {{ char + ' ' }}
+                                {% endfor %}
+                                ...
+                                {% else %}
+                                {{ article.title }}
+                                {% endif %}
+                            </span>
+                        </p>
+                    </div>
+                </a>
+            {% endfor %}
         </div>
     </div>
 </section>
