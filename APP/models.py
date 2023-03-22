@@ -46,8 +46,8 @@ class Article(db.Model, UserMixin):
     title = db.Column(db.String(100), nullable=False)
     creationdate = db.Column(db.DateTime, nullable=False, default=datetime.datetime.utcnow)
     image = db.Column(db.String(50), nullable=False)
-    content = db.Column(db.String(1000), nullable=False)
-
+    content = db.Column(db.String(5000), nullable=False)
+    author_name = db.Column(db.String(100), nullable=False)
     author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
 
     def to_dict(self):
