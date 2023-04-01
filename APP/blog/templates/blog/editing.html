@@ -12,12 +12,17 @@
 
 <section class="hero">
     <div class="container-medium">
-        <h2>« Être informer pour être balancer »</h2>
+        <h2>« L'écriture, un art à la source de l'information »</h2>
+        <div class="container-go-back">
+            <button class="go-back">
+                <a href="{{url_for('blog.home')}}">Retour au blog</a>
+            </button>
+        </div>
     </div>
 </section>
-<div class="container-center">
-    <div class="container-connexion">
-        <h2>Connectez-vous</h2>
+<div class="container">
+    <div class="container-medium">
+        <h2><span>Nouvel article</span></h2>
 
         {% with messages = get_flashed_messages() %}
           {% if messages %}
@@ -29,7 +34,13 @@
           {% endif %}
         {% endwith %}
 
+        {% if is_published == True %}
+            <p class="published">Your article has been published.</p>
+        {% endif %}
+
         <form class="connexion" method="POST" action="{{url_for('blog.editing')}}">
+            {{ ckeditor.load() }}
+            {{ ckeditor.config(name='body') }}
             {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
         </form>
         
