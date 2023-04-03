@@ -1,3 +1,7 @@
+.error-message, .help-block {
+  color: red;
+}
+
 .container-go-back:before {
   content: "";
   z-index: 1;

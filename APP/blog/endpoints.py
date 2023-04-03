@@ -25,11 +25,15 @@ def published(state):
         return is_published
 
 
-# La page home est une page servant à diriger les utilisateurs vers les autres pages de la section recherches.
 def get_all_articles():
     all_articles = read_all('Article')
     return all_articles
 
+def get_article(id_):
+    article = get('Article', id_)
+    return article
+
+# La page home est une page servant à diriger les utilisateurs vers les autres pages de la section recherches.
 @bp.route('/home')
 def home():
     return render_page(
@@ -44,14 +48,35 @@ def home():
 # La page mission est une page parlant de notre objectif et de celui du mouvement GreenPole.
 @bp.route('/article/<article_id>')
 def article(article_id):
-    return render_page('article', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Article", current_li=bp.name, disable_extra_part=(current_user.is_authenticated))
+    article = get_article(article_id)
+    content = article.content
+    paragraphs = []
+    for n in range(len(content)):
+        if len(content) > 0 and '</p>' in content:
+            index = content.index('</p>')+4
+            print(index)
+            paragraphs.append(content[:index])
+            content = content[index:]
+            print(len(content), 'suha')
+            print(content)
+        else:
+            break
+
+    return render_page(
+        'article', article=get_article(article_id), paragraphs=paragraphs,
+        website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Article", 
+        current_li=bp.name, disable_extra_part=(current_user.is_authenticated)
+        )
 
 # #
 
 # La page mission est une page parlant de notre objectif et de celui du mouvement GreenPole.
 @bp.route('/example_article')
 def example_article():
-    return render_page('example_article', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Example_article", current_li=bp.name, disable_extra_part=(current_user.is_authenticated))
+    return render_page(
+        'example_article', website_name=WEBSITE_NAME, add_navbar_footer=True, page_title="Example_article", 
+        current_li=bp.name, disable_extra_part=(current_user.is_authenticated)
+        )
 
 # #
 

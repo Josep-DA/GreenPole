@@ -1,3 +1,37 @@
+.container-go-back:before {
+  content: "";
+  z-index: 1;
+  display: block;
+  position: relative;
+  bottom: 0.023em;
+  left: 0.7em;
+  transform: rotate(45deg);
+  background-color: blue;
+  height: 1.22em;
+  width: 1.22em;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+}
+
+.container-go-back {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 2em;
+}
+.container-go-back .go-back {
+  z-index: 3;
+  background-color: blue;
+  padding: 0.4em 0.6em;
+}
+.container-go-back .go-back a {
+  color: white;
+}
+.container-go-back .go-back:hover a {
+  color: #6D9886;
+}
+
 .title {
   font-size: 2em;
 }
@@ -11,25 +45,39 @@
 .top-hero .container-top-image img {
   width: 100%;
   height: 30em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: rgb(212, 225, 227);
+  background: radial-gradient(circle, rgb(212, 225, 227) 60%, rgb(148, 157, 160) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4e1e3",endColorstr="#949da0",GradientType=1);
 }
-.top-hero .container-top-image .container-medium .title::before {
+.top-hero .container-top-image .container-medium .box-title {
+  height: 10em;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+.top-hero .container-top-image .container-medium .box-title .title::before {
   content: "";
   display: inline-block;
   background-color: green;
-  height: 1.2em;
+  height: 100%;
   width: 0.2em;
   border-radius: 10em;
-  position: relative;
-  top: 0.2em;
+  margin-right: 0.5em;
 }
-.top-hero .container-top-image .container-medium .title {
-  margin: 1em -2em 1em;
+.top-hero .container-top-image .container-medium .box-title .title {
+  margin: 1em -0.5em 1em;
+  display: flex;
+  align-items: center;
 }
 .top-hero .container-top-image .container-medium address {
+  margin-top: 1.5em;
   font-size: 1.1em;
   line-height: 1.2em;
+}
+.top-hero .container-top-image .container-medium address a {
+  text-transform: capitalize;
 }
 
 .text {
@@ -46,7 +94,7 @@
   margin: 0 2em;
   font-size: 1.2em;
 }
-.content .container-medium .container-text .text {
+.content .container-medium .container-text p {
   line-height: 1.5em;
 }
 .content .container-medium .container-image {

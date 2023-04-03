@@ -1,0 +1,62 @@
+{% extends "tools/model.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('blog.static', filename='css/' + page_title.lower() + '.css')}}">
+<title>{{ page_title }}</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<section class="top-hero">
+    <div class="container-top-image">
+        <img src="{{ article.image }}" alt="top-image">
+        <div class="container-go-back">
+            <button class="go-back">
+                <a href="{{url_for('blog.home')}}">Retour au blog</a>
+            </button>
+        </div>
+        <div class="container-medium">
+            <div class="box-title">
+                <h2 class="title">
+                    <span>
+                        {{ article.title }}
+                    </span>
+                </h2>
+            </div>
+            <address>
+                Written by <a href="mailto:webmaster@example.com">{{article.author_name}}</a>.<br>
+                Read other article written by the author: Example.com<br>
+                <br>
+                Date: <span class="date">{{article.creationdate.strftime('%Y/%m/%d %H:%M:%S')}}</span>
+            </address>
+        </div>
+    </div>
+</section>
+
+{% for paragraph in paragraphs %}
+<section class="content">
+    <div class="container-medium">
+        <div class="container-text">
+            {{paragraph | safe }}
+        </div>
+    </div>
+</section>
+{% endfor %}
+
+
+<section class="signature">
+    <div class="container-medium">
+        <div class="container-text">
+            <p class="text"> 
+                Une production de GreenPole
+            </p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
