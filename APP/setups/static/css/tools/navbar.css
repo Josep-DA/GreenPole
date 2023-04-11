@@ -57,7 +57,7 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 1.2em;
+    padding: 1.5em;
     position: absolute;
     right: 0;
     top: 0;
@@ -79,11 +79,11 @@
     font-weight: bolder;
   }
   header .sp-container .container-medium nav .navigation li {
-    margin-bottom: 0.2em;
+    margin-bottom: 1em;
   }
   header .sp-container .container-medium nav .navigation li a {
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1em;
     color: rgb(107, 105, 105);
   }
   header .sp-container .container-medium nav .navigation li:hover a {
@@ -95,14 +95,14 @@
   }
   header .sp-container .container-medium nav .connexion li {
     text-align: center;
-    margin: 0.6em 0 0;
+    margin: 1em 0 0;
     padding: 0.2em 0.4em;
     background-color: #6D9886;
     border-radius: 5em;
   }
   header .sp-container .container-medium nav .connexion li a {
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1em;
     color: white;
   }
   header .sp-container .container-medium nav .connexion .se-connecter a {
