@@ -4,7 +4,9 @@
     <div class="sp-container">
         <div class="container-medium">
             <h1><a href="{{url_for('home')}}">{{website_name[0]}}<span>{{website_name[1]}}</a></span></h1>
-            <nav>
+            <i class="fa-solid fa-bars" id="bars" onclick="showMenu(this)"></i>
+            <nav id="menu">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul class="navigation">
                     <li class="{% if current_li == 'app' %}current-li{% endif %}">
                         <a href="{{url_for('home')}}">Acceuil</a>

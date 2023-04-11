@@ -30,4 +30,11 @@ li {
 .container-medium {
   margin: 0 10em;
   margin-bottom: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .container-medium {
+    margin: 0 2.5em;
+    margin-bottom: 2em;
+  }
 }/*# sourceMappingURL=base-style.css.map */

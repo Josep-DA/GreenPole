@@ -17,3 +17,16 @@ window.addEventListener("scroll", () => {
     }
 })
 
+
+function showMenu(element) {
+    element.style.display = "none"
+    let menu = document.getElementById('menu')
+    menu.style.display = "flex"
+}
+
+function hideMenu() {
+    let menu = document.getElementById('menu')
+    let bars = document.getElementById('bars')
+    menu.style.display = "none"
+    bars.style.display = "inline"
+}
