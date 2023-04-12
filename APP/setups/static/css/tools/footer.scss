@@ -12,26 +12,26 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-left: 5em;
         
                 div {
-                    width: 15em;
-        
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 1em;
+
                     .title {
                         font-size: 1.2em;
-                        margin-bottom: 1em;
+                        margin-bottom: .2em;
                         
                     }
 
                     ul {
+                        text-align: center;
                         
                         li {
-                            display: flex;
-                            align-items: center;
-                            margin: .75em 0;
-                            margin-left: 1em;  
+                            margin: .75em 0; 
                             a {
-                                color: white;
+                                color: rgb(112, 112, 112);
                             }
                         }
                     }

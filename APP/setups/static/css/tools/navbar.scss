@@ -89,7 +89,7 @@
                             margin-bottom: 1em;
                             a {
                                 font-weight: bold;
-                                font-size: 1em;
+                                font-size: 1.1em;
                                 color: rgb(107, 105, 105);
                             }
                         }
@@ -112,7 +112,7 @@
         
                             a {
                                 font-weight: bold;
-                                font-size: 1em;
+                                font-size: 1.1em;
                                 color: white;
                             }
                         }
@@ -168,6 +168,10 @@
     .shift {
         padding-bottom: 10em;
         background-color: #6D9886;
+    }
+
+    .fa-bars, .fa-xmark {
+        display: none;
     }
     
     header {

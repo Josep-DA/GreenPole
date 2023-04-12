@@ -83,7 +83,7 @@
   }
   header .sp-container .container-medium nav .navigation li a {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.1em;
     color: rgb(107, 105, 105);
   }
   header .sp-container .container-medium nav .navigation li:hover a {
@@ -102,7 +102,7 @@
   }
   header .sp-container .container-medium nav .connexion li a {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.1em;
     color: white;
   }
   header .sp-container .container-medium nav .connexion .se-connecter a {
@@ -141,6 +141,9 @@
   .shift {
     padding-bottom: 10em;
     background-color: #6D9886;
+  }
+  .fa-bars, .fa-xmark {
+    display: none;
   }
   header {
     position: relative;
